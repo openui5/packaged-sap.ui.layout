@@ -29,7 +29,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.26.3
+	 * @version 1.26.4
 	 *
 	 * @constructor
 	 * @public
@@ -127,6 +127,8 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 		
 		// Switch resizing parameters based on orientation - this must be done to initialize the values
 		this._switchOrientation();
+		
+		this._bRtl = sap.ui.getCore().getConfiguration().getRTL();
 		
 		// Create bound listener functions for keyboard event handling
 		this._keyListeners = {
@@ -438,8 +440,10 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 		}
 		
 		var iPos = oEvent[this._moveCord];
+
 		var iDelta = (iPos - this._move.start);
-		
+		iDelta = this._bRtl ? -iDelta : iDelta;
+
 		var c1NewSize = this._move.c1Size + iDelta;
 		var c2NewSize = this._move.c2Size - iDelta;
 		
@@ -456,9 +460,10 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 			this._$SplitterOverlayBar.css(this._sizeDir, this._move.relStart + iDelta);
 			
 			if (this._liveResize) {
+				var fMove = (this._move["start"] - oEvent[this._moveCord]);
 				this._resizeContents(
 					/* left content number:    */ this._move["barNum"],
-					/* number of pixels:       */ 0 - (this._move["start"] - oEvent[this._moveCord]),
+					/* number of pixels:       */ this._bRtl ? fMove : -fMove,
 					/* also change layoutData: */ false
 				);
 			}
@@ -485,9 +490,10 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 
 		var iPos = oEvent[this._moveCord];
 
+		var fMove = this._move["start"] - iPos;
 		this._resizeContents(
 			/* left content number:    */ this._move["barNum"],
-			/* number of pixels:       */ 0 - (this._move["start"] - iPos),
+			/* number of pixels:       */ this._bRtl ? fMove : -fMove,
 			/* also change layoutData: */ true
 		);
 
@@ -843,11 +849,16 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 	Splitter.prototype._switchOrientation = function() {
 		this._bHorizontal = this.getOrientation() === sap.ui.core.Orientation.Horizontal;
 		if (this._bHorizontal) {
-			this._moveCord    = "pageX";
-			this._sizeType    = "width";
-			this._sizeTypeNot = "height";
-			this._sizeDir     = "left";
 			this._sizeDirNot  = "top";
+			this._sizeTypeNot = "height";
+			this._sizeType    = "width";
+			this._moveCord    = "pageX";
+
+			if (this._bRtl) {
+				this._sizeDir     = "right";
+			} else {
+				this._sizeDir     = "left";
+			}
 		} else {
 			this._moveCord    = "pageY";
 			this._sizeType    = "height";
