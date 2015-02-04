@@ -2073,7 +2073,7 @@ html[dir=rtl][data-sap-ui-browser^=ie] .sapUiRLElementWithLabel > .sapUiRFLRow:f
   cursor: move;
   font-size: 16px;
   background-color: transparent;
-  color: #a0a0a0;
+  color: #cccccc;
   text-shadow: -1px 1px #000000;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -2087,7 +2087,7 @@ html[dir=rtl][data-sap-ui-browser^=ie] .sapUiRLElementWithLabel > .sapUiRFLRow:f
   outline-offset: -1px;
 }
 .sapUiLoSplitter > .sapUiLoSplitterBar:hover {
-  background-color: #7a5100;
+  background-color: #000000;
   color: #000000;
   text-shadow: none;
 }
@@ -2292,6 +2292,20 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
 /* modal, bubble, bottom, top */
 /* modal, bubble, bottom, top */
 /* Toolbar Separator */
+/* ------------------------------------------------------------------- */
+/* Generic Mapping: not for usage in standard control development !!!! */
+/* ------------------------------------------------------------------- */
+/* Semantic Text Colors */
+/* Semantic Element Colors */
+/* Semantic Backgrounds */
+/* Background Brand */
+/* Text Colors */
+/* Border Colors */
+/* @sapUiLightBorder: @sapHCStandardFG; */
+/* @sapUiExtraLightBorder: @sapHCStandardFG; */
+/* Accent */
+/* Backgrounds Header/Footer */
+/* Background */
 /* ============================================ */
 /* CSS for control sap.ui.layout/Form.control   */
 /* HCB                                          */
