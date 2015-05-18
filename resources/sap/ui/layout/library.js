@@ -19,14 +19,14 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/base/DataType',
 	 * @namespace
 	 * @name sap.ui.layout
 	 * @author SAP SE
-	 * @version 1.28.5
+	 * @version 1.28.6
 	 * @public
 	 */
 	
 	// delegate further initialization of this library to the Core
 	sap.ui.getCore().initLibrary({
 		name : "sap.ui.layout",
-		version: "1.28.5",
+		version: "1.28.6",
 		dependencies : ["sap.ui.core"],
 		types: [
 			"sap.ui.layout.GridIndent",
@@ -191,4 +191,4 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/base/DataType',
 
 	return sap.ui.layout;
 
-}, /* bExport= */ false);
+});

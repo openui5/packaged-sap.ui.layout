@@ -20,7 +20,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 	 * On the FormContainers, Labels and Fields GridData can be used to change the default rendering. On FormElements GridDada are not supported.
 	 * If own GridData are used this may be much more complex than the default. So in some cases the calculation for the other content may nor bring the expected result. In this case GridData should be used at all content to disable the default behaviour.
 	 * @extends sap.ui.layout.form.FormLayout
-	 * @version 1.28.5
+	 * @version 1.28.6
 	 *
 	 * @constructor
 	 * @public
@@ -806,16 +806,19 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 		function _createMainGrid( oLayout, oForm ) {
 
 			var aContainers = oForm.getFormContainers();
+			var aVisibleContainers = [];
 			var oContainer;
 			var iLength = 0;
 			var iContentLenght = 0;
 			var i = 0;
+			var j = 0;
 
 			// count only visible containers
 			for ( i = 0; i < aContainers.length; i++) {
 				oContainer = aContainers[i];
 				if (oContainer.getVisible()) {
 					iLength++;
+					aVisibleContainers.push(oContainer);
 				}
 			}
 
@@ -859,6 +862,13 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 							oContainer = sap.ui.getCore().byId(oContentElement.__myParentContainerId);
 						}
 						if (oContainer && oContainer.getVisible()) {
+							var oVisibleContainer = aVisibleContainers[j];
+							if (oContainer != oVisibleContainer) {
+								// order of containers has changed
+								bExchangeContent = true;
+								break;
+							}
+
 							var aContainerContent = oLayout.mContainers[oContainer.getId()];
 							if (aContainerContent[0] && aContainerContent[0] != oContentElement) {
 								// container uses panel but panel not the same element in content
@@ -870,6 +880,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 								bExchangeContent = true;
 								break;
 							}
+							j++;
 						} else {
 							// no container exits for content -> just remove this content
 							oLayout._mainGrid.removeContent(oContentElement);
@@ -887,7 +898,11 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 
 				if (iContentLenght < iLength) {
 					// new containers added
-					for ( i = 0; i < aContainers.length; i++) {
+					var iStartIndex = 0;
+					if (iContentLenght > 0) {
+						iStartIndex = iContentLenght--;
+					}
+					for ( i = iStartIndex; i < aContainers.length; i++) {
 						oContainer = aContainers[i];
 						if (oContainer.getVisible()) {
 							var sContainerId = oContainer.getId();

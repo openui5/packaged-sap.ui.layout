@@ -20,7 +20,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.28.5
+	 * @version 1.28.6
 	 *
 	 * @constructor
 	 * @public
@@ -693,16 +693,19 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 		function _createMainResponsiveFlowLayout( oLayout, oForm ) {
 
 			var aContainers = oForm.getFormContainers();
+			var aVisibleContainers = [];
 			var oContainer;
 			var iLength = 0;
 			var iContentLenght = 0;
 			var i = 0;
+			var j = 0;
 
 			// count only visible containers
 			for ( i = 0; i < aContainers.length; i++) {
 				oContainer = aContainers[i];
 				if (oContainer.getVisible()) {
 					iLength++;
+					aVisibleContainers.push(oContainer);
 				}
 			}
 
@@ -727,6 +730,13 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 							oContainer = sap.ui.getCore().byId(oContentElement.__myParentContainerId);
 						}
 						if (oContainer && oContainer.getVisible()) {
+							var oVisibleContainer = aVisibleContainers[j];
+							if (oContainer != oVisibleContainer) {
+								// order of containers has changed
+								bExchangeContent = true;
+								break;
+							}
+
 							var aContainerContent = oLayout.mContainers[oContainer.getId()];
 							if (aContainerContent[0] && aContainerContent[0] != oContentElement) {
 								// container uses panel but panel not the same element in content
@@ -738,6 +748,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 								bExchangeContent = true;
 								break;
 							}
+							j++;
 						} else {
 							// no container exits for content -> just remove this content
 							oLayout._mainRFLayout.removeContent(oContentElement);
@@ -751,18 +762,20 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 				}
 				if (iContentLenght < iLength) {
 					// new containers added
-					for ( i = 0; i < aContainers.length; i++) {
-						oContainer = aContainers[i];
-						if (oContainer.getVisible()) {
-							var sContainerId = oContainer.getId();
-							if (oLayout.mContainers[sContainerId]) {
-								if (oLayout.mContainers[sContainerId][0]) {
-									// panel used
-									oLayout._mainRFLayout.addContent(oLayout.mContainers[sContainerId][0]);
-								} else if (oLayout.mContainers[sContainerId][1]) {
-									// no panel - used ResponsiveFlowLayot directly
-									oLayout._mainRFLayout.addContent(oLayout.mContainers[sContainerId][1]);
-								}
+					var iStartIndex = 0;
+					if (iContentLenght > 0) {
+						iStartIndex = iContentLenght--;
+					}
+					for ( i = iStartIndex; i < iLength; i++) {
+						oContainer = aVisibleContainers[i];
+						var sContainerId = oContainer.getId();
+						if (oLayout.mContainers[sContainerId]) {
+							if (oLayout.mContainers[sContainerId][0]) {
+								// panel used
+								oLayout._mainRFLayout.addContent(oLayout.mContainers[sContainerId][0]);
+							} else if (oLayout.mContainers[sContainerId][1]) {
+								// no panel - used ResponsiveFlowLayot directly
+								oLayout._mainRFLayout.addContent(oLayout.mContainers[sContainerId][1]);
 							}
 						}
 					}
