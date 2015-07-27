@@ -22,7 +22,7 @@ sap.ui.define(['jquery.sap.global', './FormLayout', './GridContainerData', './Gr
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.30.1
+	 * @version 1.30.2
 	 *
 	 * @constructor
 	 * @public
