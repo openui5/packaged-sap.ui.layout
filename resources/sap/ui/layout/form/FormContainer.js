@@ -1,5 +1,5 @@
 /*!
- * SAP UI development toolkit for HTML5 (SAPUI5/OpenUI5)
+ * UI development toolkit for HTML5 (OpenUI5)
  * (c) Copyright 2009-2015 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
@@ -12,17 +12,18 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 
 
 	/**
-	 * Constructor for a new form/FormContainer.
+	 * Constructor for a new sap.ui.layout.form.FormContainer.
 	 *
-	 * @param {string} [sId] id for the new control, generated automatically if no id is given
+	 * @param {string} [sId] Id for the new control, generated automatically if no id is given
 	 * @param {object} [mSettings] initial settings for the new control
 	 *
 	 * @class
-	 * Used to group form elements.
+	 * A <code>FormContainer</code> represents a group inside a <code>Form</code>. It consists of <code>FormElements</code>.
+	 * The rendering of the <code>FormContainer</code> is done by the <code>FormLayout</code> assigned to the <code>Form</code>.
 	 * @extends sap.ui.core.Element
 	 *
 	 * @author SAP SE
-	 * @version 1.30.4
+	 * @version 1.30.5
 	 *
 	 * @constructor
 	 * @public
@@ -36,19 +37,19 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 		properties : {
 
 			/**
-			 * Group is expanded.
-			 * This property works only if the Container is expandable.
+			 * Container is expanded.
+			 * <b>Note:</b> This property only works if <code>expandable</code> is set to <code>true</code>.
 			 */
 			expanded : {type : "boolean", group : "Misc", defaultValue : true},
 
 			/**
-			 * Defines if the Container is expandable.
-			 * The expander icon will only be shown if a title is set for the Container.
+			 * Defines if the <code>FormContainer</code> is expandable.
+			 * <b>Note:</b> The expander icon will only be shown if a <code>title</code> is set for the <code>FormContainer</code>.
 			 */
 			expandable : {type : "boolean", group : "Misc", defaultValue : false},
 
 			/**
-			 * Invisible FormContainers are not rendered.
+			 * If set to <code>false</code>, the <code>FormContainer</code> is not rendered.
 			 */
 			visible : {type : "boolean", group : "Misc", defaultValue : true}
 		},
@@ -56,12 +57,13 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 		aggregations : {
 
 			/**
-			 * Elements of the FormContainer.
+			 * The <code>FormElements</code> contain the content (labels and fields) of the <code>FormContainers</code>.
 			 */
 			formElements : {type : "sap.ui.layout.form.FormElement", multiple : true, singularName : "formElement"},
 
 			/**
-			 * Title element of the Container. Can either be a Label object, or a simple string.
+			 * Title of the <code>FormContainer</code>. Can either be a <code>Title</code> object, or a string.
+			 * If a <code>Title</code> object is used, the style of the title can be set.
 			 */
 			title : {type : "sap.ui.core.Title", altTypes : ["string"], multiple : false}
 		},
@@ -172,7 +174,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 		};
 
 		/**
-		 * As Elements must not have an DOM reference it is not sure if one exists
+		 * As Elements must not have a DOM reference it is not sure if one exists
 		 * If the FormContainer has a DOM representation this function returns it,
 		 * independent from the ID of this DOM element
 		 * @return {Element} The Element's DOM representation or null
@@ -192,7 +194,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 		};
 
 		/**
-		 * As Elements must not have an DOM reference it is not sure if one exists
+		 * As Elements must not have a DOM reference it is not sure if one exists
 		 * If the FormElement has a DOM representation this function returns it,
 		 * independent from the ID of this DOM element
 		 * @param {sap.ui.layout.form.FormElement} oElement FormElement

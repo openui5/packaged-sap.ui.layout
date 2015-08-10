@@ -1,5 +1,5 @@
 /*!
- * SAP UI development toolkit for HTML5 (SAPUI5/OpenUI5)
+ * UI development toolkit for HTML5 (OpenUI5)
  * (c) Copyright 2009-2015 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
@@ -14,7 +14,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 			L = "L",
 			XL = "XL",
 			HIDDEN_CLASS = "sapUiHidden",
-			SPAN_SIZE_12_CLASS = "sapUiSCSpan12",
+			SPAN_SIZE_12_CLASS = "sapUiDSCSpan12",
 			SPAN_SIZE_3 = 3,
 			SPAN_SIZE_4 = 4,
 			SPAN_SIZE_6 = 6,
@@ -48,7 +48,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.30.4
+		 * @version 1.30.5
 		 *
 		 * @constructor
 		 * @public
