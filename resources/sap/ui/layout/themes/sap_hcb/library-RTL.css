@@ -1843,14 +1843,18 @@ L  0.390625% =  4px / 1024px
   /*	border-bottom: 2px solid @sapUiHighlight;*/
   position: relative;
 }
-/* Internet Explorer  does not support "text-align: start"!
+/* Internet Explorer  / Edge  does not support "text-align: start"!
 Therefore the title needs to be positioned separately for RTL and LTR mode */
 [data-sap-ui-browser^=ie] .sapUiGrid th > .sapUiFormTitle,
-[data-sap-ui-browser^=ie] .sapUiGrid td > .sapUiFormTitle {
+[data-sap-ui-browser^=ie] .sapUiGrid td > .sapUiFormTitle,
+[data-sap-ui-browser^=ed] .sapUiGrid th > .sapUiFormTitle,
+[data-sap-ui-browser^=ed] .sapUiGrid td > .sapUiFormTitle {
   text-align: left;
 }
 html[dir=rtl][data-sap-ui-browser^=ie] .sapUiGrid th > .sapUiFormTitle,
-html[dir=rtl][data-sap-ui-browser^=ie] .sapUiGrid td > .sapUiFormTitle {
+html[dir=rtl][data-sap-ui-browser^=ie] .sapUiGrid td > .sapUiFormTitle,
+html[dir=rtl][data-sap-ui-browser^=ed] .sapUiGrid th > .sapUiFormTitle,
+html[dir=rtl][data-sap-ui-browser^=ed] .sapUiGrid td > .sapUiFormTitle {
   text-align: right;
 }
 /*
@@ -2077,10 +2081,12 @@ HTML[data-sap-ui-browser*='ie'] .sapUiRFL {
 .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div {
   text-align: end;
 }
-html[data-sap-ui-browser^=ie] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div {
+html[data-sap-ui-browser^=ie] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div,
+html[data-sap-ui-browser^=ed] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div {
   text-align: right;
 }
-html[dir=rtl][data-sap-ui-browser^=ie] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div {
+html[dir=rtl][data-sap-ui-browser^=ie] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div,
+html[dir=rtl][data-sap-ui-browser^=ed] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div {
   text-align: left;
 }
 /* ===================================================== */
