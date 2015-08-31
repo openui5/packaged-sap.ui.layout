@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.28.16
+	 * @version 1.28.17
 	 *
 	 * @constructor
 	 * @public
