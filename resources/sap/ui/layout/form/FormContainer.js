@@ -23,7 +23,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 	 * @extends sap.ui.core.Element
 	 *
 	 * @author SAP SE
-	 * @version 1.30.7
+	 * @version 1.30.8
 	 *
 	 * @constructor
 	 * @public
@@ -233,12 +233,13 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 				sTooltip = oContainer._rb.getText("FORM_EXPAND");
 			}
 
+			var sModulePath = "sap.ui.layout.themes." + sap.ui.getCore().getConfiguration().getTheme();
 			if (sIcon) {
-				sIcon = jQuery.sap.getModulePath("sap.ui.layout", '/') + "themes/" + sap.ui.getCore().getConfiguration().getTheme() + sIcon;
+				sIcon = jQuery.sap.getModulePath(sModulePath, sIcon);
 				sText = "";
 			}
 			if (sIconHovered) {
-				sIconHovered = jQuery.sap.getModulePath("sap.ui.layout", '/') + "themes/" + sap.ui.getCore().getConfiguration().getTheme() + sIconHovered;
+				sIconHovered = jQuery.sap.getModulePath(sModulePath, sIconHovered);
 			}
 			sap.ui.layout.form.FormHelper.setButtonContent(oContainer._oExpandButton, sText, sTooltip, sIcon, sIconHovered);
 
