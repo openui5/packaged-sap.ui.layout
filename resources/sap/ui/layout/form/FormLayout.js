@@ -23,7 +23,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './Form', 'sap/ui/lay
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.32.0
+	 * @version 1.32.1
 	 *
 	 * @constructor
 	 * @public
