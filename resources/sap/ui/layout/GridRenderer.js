@@ -11,7 +11,7 @@ sap.ui.define(['jquery.sap.global'],
 	/**
 	 * @author SAP SE
 	 * @version
-	 * 1.26.13
+	 * 1.26.14
 	 * @namespace
 	 */
 	var GridRenderer = {};
