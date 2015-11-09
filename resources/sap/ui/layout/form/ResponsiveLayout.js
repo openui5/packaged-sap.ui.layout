@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.28.21
+	 * @version 1.28.22
 	 *
 	 * @constructor
 	 * @public
@@ -524,6 +524,23 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 						} else {
 							return false;
 						}
+					};
+
+					oRFLayout._addContentClass = function(oControl, iIndex) {
+
+						if (iIndex == 0) {
+							// check if it's the label of the FormElement
+							var oElement = sap.ui.getCore().byId(this.__myParentElementId);
+							if (oElement) {
+								var oLabel = oElement.getLabelControl();
+								if (oControl == oLabel) {
+									return "sapUiFormElementLbl";
+								}
+							}
+						}
+
+						return null;
+
 					};
 				} else {
 					oRFLayout.getContent = function(){
