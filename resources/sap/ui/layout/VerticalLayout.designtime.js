@@ -8,7 +8,7 @@
 sap.ui.define([],
 	function() {
 	"use strict";
-	
+
 	return {
 		defaultSettings : {
 			width : "100%"
@@ -21,5 +21,5 @@ sap.ui.define([],
 		name: "{name}",
 		description: "{description}"
 	};
-	
-}, /* bExport= */ true);
+
+}, /* bExport= */ false);

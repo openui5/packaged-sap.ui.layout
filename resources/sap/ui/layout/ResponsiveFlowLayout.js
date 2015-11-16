@@ -22,7 +22,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/Interval
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.32.5
+	 * @version 1.32.6
 	 *
 	 * @constructor
 	 * @public
@@ -412,7 +412,12 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/Interval
 					if (oCont.padding) {
 						aClasses.push("sapUiRFLPaddingClass");
 					}
-	
+
+					var sClass = this._addContentClass(oCont.control, j);
+					if (sClass) {
+						aClasses.push(sClass);
+					}
+
 					oStyles = {};
 					this.oRm.writeHeader("", oStyles, aClasses);
 	
@@ -681,13 +686,26 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/Interval
 		};
 
 		/**
-		 * Gets the role used for accessibility
-		 * Set by the Form control if Grid represents a FormContainer
-		 * @return {string} sRole accessibility role
+		 * Gets the role used for accessibility.
+		 * Set by the Form control if ResponsiveFlowLayout represents a FormContainer.
+		 * @return {string} sRole Accessibility role
 		 * @since 1.28.0
 		 * @private
 		 */
 		ResponsiveFlowLayout.prototype._getAccessibleRole = function() {
+
+			return null;
+
+		};
+
+		/**
+		 * Sets a class at the content container
+		 * Set by the Form control if ResponsiveFlowLayout represents a FormElement.
+		 * @return {string} sClass CSS class
+		 * @since 1.28.22
+		 * @private
+		 */
+		ResponsiveFlowLayout.prototype._addContentClass = function(oControl, iIndex) {
 
 			return null;
 
