@@ -2326,6 +2326,9 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
   overflow: hidden;
   vertical-align: top;
 }
+html[data-sap-ui-browser^="ie"] .sapUiVlt {
+  vertical-align: baseline;
+}
 /* mixin call for creating container content padding classes (arguments: rootContainer, contentSelector) */
 .sapUiVlt.sapUiContentPadding  {
   padding: 1rem;
