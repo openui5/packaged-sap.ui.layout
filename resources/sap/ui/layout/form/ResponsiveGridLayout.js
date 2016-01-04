@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2015 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 	 *
 	 * This control cannot be used standalone, it only renders a <code>Form</code>, so it must be assigned to a <code>Form</code>.
 	 * @extends sap.ui.layout.form.FormLayout
-	 * @version 1.34.1
+	 * @version 1.34.2
 	 *
 	 * @constructor
 	 * @public
@@ -87,8 +87,8 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 			adjustLabelSpan : {type : "boolean", group : "Misc", defaultValue : true},
 
 			/**
-			 * Number of grid cells that are empty at the end of each line on extra large size. 
-			 * 
+			 * Number of grid cells that are empty at the end of each line on extra large size.
+			 *
 			 * <b>Note:</b> If the default value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value is used.
 			 * @since 1.34.0
 			 */
@@ -885,22 +885,28 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 			var iColumnsL = oLayout.getColumnsL();
 			// If the columsnXL is not set the value of columnsL is used
 			var iColumnsXL = oLayout.getColumnsXL();
-			if (iColumnsXL < 0) {
-				iColumnsXL = iColumnsL;
-			}
 
 			var oLD = oLayout.getLayoutDataForElement(oContainer, "sap.ui.layout.GridData");
+			var bLinebreakXL = false;
+			var bLastXL = false;
+			var bLastRowXL = false;
 			if (!oLD) {
 				// only needed if container has no own LayoutData
-				var bLinebreakXL = (iVisibleContainer % iColumnsXL) == 1;
-				var bLastXL = (iVisibleContainer % iColumnsXL) == 0;
-				var bLastRowXL = iVisibleContainer > (iVisibleContainers - iColumnsXL + (iVisibleContainers % iColumnsXL));
 				var bLinebreakL = (iVisibleContainer % iColumnsL) == 1;
 				var bLastL = (iVisibleContainer % iColumnsL) == 0;
 				var bLastRowL = iVisibleContainer > (iVisibleContainers - iColumnsL + (iVisibleContainers % iColumnsL));
 				var bLinebreakM = (iVisibleContainer % iColumnsM) == 1;
 				var bLastM = (iVisibleContainer % iColumnsM) == 0;
 				var bLastRowM = iVisibleContainer > (iVisibleContainers - iColumnsM + (iVisibleContainers % iColumnsM));
+
+				if (iColumnsXL > 0) {
+					bLinebreakXL = (iVisibleContainer % iColumnsXL) == 1;
+					bLastXL = (iVisibleContainer % iColumnsXL) == 0;
+					bLastRowXL = iVisibleContainer > (iVisibleContainers - iColumnsXL + (iVisibleContainers % iColumnsXL));
+				} else {
+					bLastXL = bLastL;
+					bLastRowXL = bLastRowL;
+				}
 
 				if (oContainerNext) {
 					var oLDNext = oLayout.getLayoutDataForElement(oContainerNext, "sap.ui.layout.GridData");
@@ -927,7 +933,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 					if (sStyle) {
 						sStyle = sStyle + " ";
 					}
-					sStyle = "sapUiFormResGridLastContL";
+					sStyle = sStyle + "sapUiFormResGridLastContL";
 				}
 				if (bLastM) {
 					if (sStyle) {
@@ -957,12 +963,14 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 
 				oLD = oControl.getLayoutData();
 				if (!oLD) {
-					oLD = new GridData(oControl.getId() + "--LD", { linebreakXL: bLinebreakXL, linebreakL: bLinebreakL, linebreakM: bLinebreakM });
+					oLD = new GridData(oControl.getId() + "--LD", { linebreakL: bLinebreakL, linebreakM: bLinebreakM });
 					oControl.setLayoutData( oLD );
 				} else {
-					oLD.setLinebreakXL(bLinebreakXL);
 					oLD.setLinebreakL(bLinebreakL);
 					oLD.setLinebreakM(bLinebreakM);
+				}
+				if (iColumnsXL > 0) {
+					oLD.setLinebreakXL(bLinebreakXL);
 				}
 				oLD._setStylesInternal(sStyle);
 			}

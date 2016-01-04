@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2015 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -26,7 +26,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	 * Use <code>LayoutData</code> to influence the layout for special cases in the Input/Display controls.
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 * @extends sap.ui.core.Control
-	 * @version 1.34.1
+	 * @version 1.34.2
 	 *
 	 * @constructor
 	 * @public
@@ -77,7 +77,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			 * We suggest using the <code>ResponsiveGridLayout</code> for rendering a <code>SimpleForm</code>, as its responsiveness uses the space available in the best way possible.
 			 */
 			layout : {type : "sap.ui.layout.form.SimpleFormLayout", group : "Misc", defaultValue : sap.ui.layout.form.SimpleFormLayout.ResponsiveLayout},
-			
+
 			/**
 			 * Default span for labels in extra large size.
 			 *
@@ -85,7 +85,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			 * @since 1.34.0
 			 */
 			labelSpanXL : {type : "int", group : "Misc", defaultValue : -1},
-			
+
 			/**
 			 * Default span for labels in large size.
 			 *
@@ -127,7 +127,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			 * @since 1.34.0
 			 */
 			adjustLabelSpan : {type : "boolean", group : "Misc", defaultValue : true},
-			
+
 			/**
 			 * Number of grid cells that are empty at the end of each line on extra large size.
 			 *
@@ -135,7 +135,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			 * @since 1.34.0
 			 */
 			emptySpanXL : {type : "int", group : "Misc", defaultValue : -1},
-			
+
 			/**
 			 * Number of grid cells that are empty at the end of each line on large size.
 			 *
@@ -168,7 +168,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			 * @since 1.34.0
 			 */
 			columnsXL : {type : "int", group : "Misc", defaultValue : -1},
-			
+
 			/**
 			 * Form columns for large size.
 			 * The number of columns for large size must not be smaller than the number of columns for medium size.
@@ -205,7 +205,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			 * @since 1.34.0
 			 */
 			breakpointXL : {type : "int", group : "Misc", defaultValue : 1440},
-			
+
 			/**
 			 * Breakpoint between Medium size and Large size.
 			 *
@@ -245,12 +245,12 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			 * layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:1})}),
 			 * </pre>
 			 */
-			content : {type : "sap.ui.core.Element", multiple : true, singularName : "content"}, 
+			content : {type : "sap.ui.core.Element", multiple : true, singularName : "content"},
 
 			/**
 			 * Hidden, for internal use only.
 			 */
-			form : {type : "sap.ui.layout.form.Form", multiple : false, visibility : "hidden"}, 
+			form : {type : "sap.ui.layout.form.Form", multiple : false, visibility : "hidden"},
 
 			/**
 			 * Title element of the <code>SimpleForm</code>. Can either be a <code>Title</code> control, or a string.
