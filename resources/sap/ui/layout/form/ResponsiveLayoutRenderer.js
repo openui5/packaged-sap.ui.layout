@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2015 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -14,14 +14,14 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 	 * @namespace
 	 */
 	var ResponsiveLayoutRenderer = Renderer.extend(FormLayoutRenderer);
-	
-	
+
+
 	ResponsiveLayoutRenderer.getMainClass = function(){
 		return "sapUiFormResLayout";
 	};
-	
+
 	ResponsiveLayoutRenderer.renderContainers = function(rm, oLayout, oForm){
-	
+
 		var aContainers = oForm.getFormContainers();
 		var iLength = 0;
 		for ( var i = 0; i < aContainers.length; i++) {
@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 				iLength++;
 			}
 		}
-	
+
 		if (iLength > 0) {
 			// special case: only one container -> do not render an outer ResponsiveFlowLayout
 			if (iLength > 1) {
@@ -44,9 +44,9 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 				rm.renderControl(oLayout.mContainers[aContainers[0].getId()][1]);
 			}
 		}
-	
+
 	};
-	
+
 
 	return ResponsiveLayoutRenderer;
 

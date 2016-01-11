@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2015 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -10,11 +10,11 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 	"use strict";
 
 
-	
+
 	/**
 	 * Constructor for a new Grid.
 	 *
-	 * @param {string} [sId] id for the new control, generated automatically if no id is given 
+	 * @param {string} [sId] id for the new control, generated automatically if no id is given
 	 * @param {object} [mSettings] initial settings for the new control
 	 *
 	 * @class
@@ -22,7 +22,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.28.25
+	 * @version 1.28.26
 	 *
 	 * @constructor
 	 * @public
@@ -31,40 +31,40 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 	 * @ui5-metamodel This control/element also will be described in the UI5 (legacy) designtime metamodel
 	 */
 	var Grid = Control.extend("sap.ui.layout.Grid", /** @lends sap.ui.layout.Grid.prototype */ { metadata : {
-	
+
 		library : "sap.ui.layout",
 		properties : {
-	
+
 			/**
 			 * Optional. Width of the Grid. If not specified, then 100%.
 			 */
 			width : {type : "sap.ui.core.CSSSize", group : "Dimension", defaultValue : '100%'},
-	
+
 			/**
 			 * Optional. Vertical spacing between the rows in the Grid. In rem, allowed values are 0, 0.5, 1 and 2.
 			 */
 			vSpacing : {type : "float", group : "Dimension", defaultValue : 1},
-	
+
 			/**
 			 * Optional. Horizontal spacing between the content in the Grid. In rem, allowed values are 0, 0.5 , 1 or 2.
 			 */
 			hSpacing : {type : "float", group : "Dimension", defaultValue : 1},
-	
+
 			/**
 			 * Optional. Position of the Grid in the window or surrounding container. Possible values are "Center", "Left" and "Right".
 			 */
 			position : {type : "sap.ui.layout.GridPosition", group : "Dimension", defaultValue : "Left"},
-	
+
 			/**
 			 * Optional. A string type that represents Grid's default span values for large, medium and small screens for the whole Grid. Allowed values are separated by space Letters L, M or S followed by number of columns from 1 to 12 that the container has to take, for example: "L2 M4 S6", "M12", "s10" or "l4 m4". Note that the parameters has to be provided in the order large medium small.
 			 */
 			defaultSpan : {type : "sap.ui.layout.GridSpan", group : "Behavior", defaultValue : "L3 M6 S12"},
-	
+
 			/**
 			 * Optional. Defines default for the whole Grid numbers of empty columns before the current span begins. It can be defined for large, medium and small screens. Allowed values are separated by space Letters L, M or S followed by number of columns from 0 to 11 that the container has to take, for example: "L2 M4 S6", "M12", "s10" or "l4 m4". Note that the parameters has to be provided in the order large medium small.
 			 */
 			defaultIndent : {type : "sap.ui.layout.GridIndent", group : "Behavior", defaultValue : "L0 M0 S0"},
-	
+
 			/**
 			 * If true then not the media Query ( device screen size), but the size of the container surrounding the grid defines the current range (large, medium or small).
 			 */
@@ -72,24 +72,24 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 		},
 		defaultAggregation : "content",
 		aggregations : {
-	
+
 			/**
 			 * Controls that are placed into Grid layout.
 			 */
 			content : {type : "sap.ui.core.Control", multiple : true, singularName : "content"}
 		}
 	}});
-	
+
 	/**
 	 * This file defines behavior for the control
 	 */
 	(function() {
-		
+
 		Grid.prototype.init = function() {
 			this._iBreakPointTablet = sap.ui.Device.media._predefinedRangeSets[sap.ui.Device.media.RANGESETS.SAP_STANDARD].points[0];
 			this._iBreakPointDesktop = sap.ui.Device.media._predefinedRangeSets[sap.ui.Device.media.RANGESETS.SAP_STANDARD].points[1];
 		};
-		
+
 		/**
 		 * Used for after-rendering initialization.
 		 *
@@ -103,20 +103,20 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 				sap.ui.Device.media.attachHandler(this._handleMediaChange, this, sap.ui.Device.media.RANGESETS.SAP_STANDARD);
 			}
 		};
-		
+
 		Grid.prototype.onBeforeRendering = function() {
 			// Cleanup resize event registration before re-rendering
 			this._cleanup();
 		};
-		
+
 		Grid.prototype.exit = function() {
 			// Cleanup resize event registration on exit
 			this._cleanup();
 		};
-		
+
 		/**
 		 * Clean up the control.
-		 * 
+		 *
 		 * @private
 		 */
 		Grid.prototype._cleanup = function() {
@@ -125,23 +125,23 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 				sap.ui.core.ResizeHandler.deregister(this._sContainerResizeListener);
 				this._sContainerResizeListener = null;
 			}
-			
+
 			// Device Media Change handler
 			sap.ui.Device.media.detachHandler(this._handleMediaChange, this, sap.ui.Device.media.RANGESETS.SAP_STANDARD);
 		};
-		
+
 		Grid.prototype._handleMediaChange  = function(oParams) {
 			this._toggleClass(oParams.name);
 		};
-		
+
 		Grid.prototype._setBreakPointTablet = function( breakPoint) {
 			this._iBreakPointTablet = breakPoint;
 		};
-		
+
 		Grid.prototype._setBreakPointDesktop = function( breakPoint) {
 			this._iBreakPointDesktop = breakPoint;
 		};
-		
+
 		Grid.prototype._onParentResize = function() {
 			var oDomRef = this.getDomRef();
 			// Prove if Dom reference exist, and if not - clean up the references.
@@ -149,11 +149,11 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 				this._cleanup();
 				return;
 			}
-	
+
 			if (!jQuery(oDomRef).is(":visible")) {
 				return;
 			}
-	
+
 			var iCntWidth = oDomRef.clientWidth;
 			if (iCntWidth <= this._iBreakPointTablet) {
 				this._toggleClass("Phone");
@@ -163,18 +163,18 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 				this._toggleClass("Desktop");
 			}
 		};
-		
-		
+
+
 		Grid.prototype._toggleClass = function(sMedia) {
 			var $DomRef = this.$();
 			if (!$DomRef) {
 				return;
 			}
-			
+
 			if ($DomRef.hasClass("sapUiRespGridMedia-Std-" + sMedia)) {
 				return;
 			}
-			
+
 			$DomRef.toggleClass("sapUiRespGridMedia-Std-" + sMedia, true);
 			if (sMedia === "Phone") {
 				$DomRef.toggleClass("sapUiRespGridMedia-Std-Desktop", false).toggleClass("sapUiRespGridMedia-Std-Tablet", false);
@@ -183,11 +183,11 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 			} else {
 				$DomRef.toggleClass("sapUiRespGridMedia-Std-Phone", false).toggleClass("sapUiRespGridMedia-Std-Tablet", false);
 			}
-			
+
 			this.fireEvent("mediaChanged", {media: sMedia});
 		};
-		
-		
+
+
 		/*
 	     * Get span information for the Control
 	     * @param {sap.ui.core.Control} Control instance
@@ -196,7 +196,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 	     */
 		Grid.prototype._getLayoutDataForControl = function(oControl) {
 			var oLayoutData = oControl.getLayoutData();
-	
+
 			if (!oLayoutData) {
 				return undefined;
 			} else if (oLayoutData instanceof sap.ui.layout.GridData) {
@@ -212,7 +212,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 				}
 			}
 		};
-		
+
 		/*
 		 * If LayoutData is changed on one inner control, the whole grid needs to re-render
 		 * because it may influence other rows and columns
@@ -238,7 +238,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 		};
 
 	}());
-	
+
 
 	return Grid;
 
