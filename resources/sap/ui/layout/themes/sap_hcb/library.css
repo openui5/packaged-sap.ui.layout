@@ -282,13 +282,6 @@
 .sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  /*
-		* Performance tweak - force the section content on to the GPU effectively separating it in a different
-		* composite layer. This is better done with will-change: transform, but at the moment is not supported on
-		* many platforms. When will-change becomes widely adopted than it's better to use it rather than translate3d
-		*/
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 .sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainer {
   overflow-x: hidden;
@@ -300,13 +293,6 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: block;
-  /*
-	* Performance tweak - force the section content on to the GPU effectively separating it in a different
-	* composite layer. This is better done with will-change: transform, but at the moment is not supported on
-	* many platforms. When will-change becomes widely adopted than it's better to use it rather than translate3d
-	*/
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 .sapUiFixFlexScrolling > .sapUiFixFlexFlexible {
   display: block;
@@ -2697,13 +2683,13 @@ html[dir=rtl][data-sap-ui-browser^=ed] .sapUiGrid td > .sapUiFormTitle {
   bottom: 0;
   right: 0;
 }
-.sapUiRGLContainerCont {
-  padding-bottom: 1.5rem;
-}
 .sapUiRGLContainerColl > .sapUiRGLContainerCont {
   display: none;
 }
 /* add paddings to content */
+.sapUiFormResGridCont {
+  padding-bottom: 1.5rem;
+}
 .sapUiFormResGridCont > div {
   padding: 0 0.25rem 0.5rem 0.25rem;
   -moz-box-sizing: padding-box;
@@ -2715,7 +2701,7 @@ html[dir=rtl][data-sap-ui-browser^=ed] .sapUiGrid td > .sapUiFormTitle {
 /* ================= */
 /*   SMALL DEVICES   */
 /* ================= */
-.sapUiRespGridMedia-Std-Phone > div > .sapUiRGLContainer > .sapUiRGLContainerCont {
+.sapUiRespGridMedia-Std-Phone > div > .sapUiRGLContainer > .sapUiFormResGridCont {
   padding-bottom: 0.5rem;
 }
 /* ================================= */
@@ -2749,10 +2735,10 @@ html[dir=rtl][data-sap-ui-browser^=ed] .sapUiGrid td > .sapUiFormTitle {
   padding-bottom: 0.125rem;
 }
 /* on last row no padding-bottom on container content */
-.sapUiRespGridMedia-Std-Phone > .sapUiFormResGridLastRowM:last-child > .sapUiRGLContainer > .sapUiRGLContainerCont,
-.sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridLastRowM > .sapUiRGLContainer > .sapUiRGLContainerCont,
-.sapUiRespGridMedia-Std-Desktop > .sapUiFormResGridLastRowL > .sapUiRGLContainer > .sapUiRGLContainerCont,
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridLastRowXL > .sapUiRGLContainer > .sapUiRGLContainerCont {
+.sapUiRespGridMedia-Std-Phone > .sapUiFormResGridLastRowM:last-child .sapUiFormResGridCont,
+.sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridLastRowM .sapUiFormResGridCont,
+.sapUiRespGridMedia-Std-Desktop > .sapUiFormResGridLastRowL .sapUiFormResGridCont,
+.sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridLastRowXL .sapUiFormResGridCont {
   padding-bottom: 0;
 }
 /* ============================ */
@@ -3351,6 +3337,9 @@ html[data-sap-ui-browser="ie9"] .sapUiFormTitle > .sapUiBtnS.sapUiBtnLite.sapUiB
 .sapUiFormM > .sapUiGrid > tbody > tr > td {
   padding: 0 0 0 0.5rem;
 }
+.sapUiGrid > tbody > tr.sapUiGridConteinerFirstRow > td {
+  padding-top: 2rem;
+}
 .sapUiGrid > tbody > tr:first-child > td,
 .sapUiForm[aria-labelledby] > .sapUiGrid > tbody > tr:nth-child(2) > td {
   padding-top: 1rem;
@@ -3370,11 +3359,25 @@ html[data-sap-ui-browser="ie9"] .sapUiFormTitle > .sapUiBtnS.sapUiBtnLite.sapUiB
 .sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr > td.sapUiFormElementLbl {
   padding-top: 1rem;
 }
+.sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr.sapUiGridConteinerFirstRow > td.sapUiFormElementLbl {
+  padding-top: 3rem;
+}
+.sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr:first-child > td.sapUiFormElementLbl,
+.sapUiFormEdit[aria-labelledby].sapUiFormM > .sapUiGrid > tbody > tr:nth-child(2) > td.sapUiFormElementLbl {
+  padding-top: 2rem;
+}
 html[data-sap-ui-browser^="ff"] .sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr > td.sapUiFormElementLbl {
   padding-top: 0.9375rem;
 }
 .sapUiSizeCompact .sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr > td.sapUiFormElementLbl {
   padding-top: 0.5rem;
+}
+.sapUiSizeCompact .sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr.sapUiGridConteinerFirstRow > td.sapUiFormElementLbl {
+  padding-top: 2.5rem;
+}
+.sapUiSizeCompact .sapUiGrid > tbody > tr:first-child > td.sapUiFormElementLbl,
+.sapUiSizeCompact .sapUiForm[aria-labelledby] > .sapUiGrid > tbody > tr:nth-child(2) > td.sapUiFormElementLbl {
+  padding-top: 1.5rem;
 }
 html[data-sap-ui-browser^="ff"].sapUiSizeCompact .sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr > td.sapUiFormElementLbl,
 html[data-sap-ui-browser^="ff"] .sapUiSizeCompact .sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr > td.sapUiFormElementLbl {
@@ -3396,7 +3399,6 @@ html[data-sap-ui-browser^="ff"] .sapUiSizeCompact .sapUiFormEdit.sapUiFormM > .s
 .sapUiGrid > tbody > tr > td > .sapUiFormTitle {
   border: none;
   margin-bottom: 1rem;
-  margin-top: 2rem;
 }
 .sapUiGrid > tbody > tr:first-child > td > .sapUiFormTitle,
 .sapUiForm[aria-labelledby] > .sapUiGrid > tbody > tr:nth-child(2) > td > .sapUiFormTitle {
@@ -3456,10 +3458,10 @@ html[data-sap-ui-browser^="ff"] .sapUiSizeCompact .sapUiFormEdit.sapUiFormM > .s
 .sapUiFormM .sapUiRespGrid.sapUiRespGridVSpace0 > div {
   padding-bottom: 0;
 }
-.sapUiFormM .sapUiRGLContainerCont {
+.sapUiFormM .sapUiFormResGridCont {
   padding-bottom: 2rem;
 }
-.sapUiFormM .sapUiRespGridMedia-Std-Phone > div > .sapUiRGLContainer > .sapUiRGLContainerCont {
+.sapUiFormM .sapUiRespGridMedia-Std-Phone .sapUiFormResGridCont {
   padding-bottom: 1rem;
 }
 /* ================================ */

@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.34.2
+	 * @version 1.34.3
 	 *
 	 * @constructor
 	 * @public
@@ -381,12 +381,14 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 							oPanel = _createPanel(oLayout, oContainer, oRFLayout);
 							_changeGetLayoutDataOfResponsiveFlowLayout(oRFLayout, true);
 						}
+						oRFLayout.removeStyleClass("sapUiRLContainer");
 					} else {
 						// panel not longer needed
 						if (oLayout.mContainers[sContainerId] && oLayout.mContainers[sContainerId][0]) {
 							_deletePanel(oLayout.mContainers[sContainerId][0]);
 							_changeGetLayoutDataOfResponsiveFlowLayout(oRFLayout, false);
 						}
+						oRFLayout.addStyleClass("sapUiRLContainer");
 					}
 
 					var mContent = _createContent(oLayout, oContainer, oRFLayout);
@@ -658,7 +660,8 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 
 					if (oLD) {
 						return oLD;
-					} else {
+					} else if (oElement) {
+					// for containers without panel the margins are needed.
 						return oLayout._defaultLayoutData;
 					}
 				};

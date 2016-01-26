@@ -145,7 +145,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 			if (bSeparatorColumn) {
 				iTitleCells++;
 			}
-			rm.write("<tr><td colspan=" + iTitleCells + " class=\"sapUiGridHeader\"");
+			rm.write("<tr class=\"sapUiGridConteinerFirstRow\"><td colspan=" + iTitleCells + " class=\"sapUiGridHeader\"");
 			if (sTooltip) {
 				rm.writeAttributeEscaped('title', sTooltip);
 			}
@@ -160,6 +160,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 			var oElement;
 			var aReservedCells = [];
 			var bEmptyRow;
+			var bFirstVisibleFound = false;
 			for (var j = 0, jl = aElements.length; j < jl; j++) {
 
 				oElement = aElements[j];
@@ -167,6 +168,14 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 					bEmptyRow = aReservedCells[0] && (aReservedCells[0][0] == iColumns);
 
 					rm.write("<tr");
+
+					if (!bFirstVisibleFound) {
+						bFirstVisibleFound = true;
+						if (!oContainer.getTitle()) {
+							rm.addClass("sapUiGridConteinerFirstRow");
+						}
+					}
+
 					if (!this.checkFullSizeElement(oLayout, oElement) && aReservedCells[0] != "full" && !bEmptyRow) {
 						rm.writeElementData(oElement);
 						rm.addClass("sapUiFormElement");
@@ -230,7 +239,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 
 		if (oTitle1 || oTitle2) {
 			// render title row (if one container has a title, the other has none leave the cells empty)
-			rm.write("<tr><td colspan=" + iContainerColumns + " class=\"sapUiGridHeader\"");
+			rm.write("<tr class=\"sapUiGridConteinerFirstRow\"><td colspan=" + iContainerColumns + " class=\"sapUiGridHeader\"");
 			if (sTooltip1) {
 				rm.writeAttributeEscaped('title', sTooltip1);
 			}
@@ -257,6 +266,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 			var oElement2;
 			var bEmptyRow1;
 			var bEmptyRow2;
+			var bFirstVisibleFound = false;
 
 			while (i1 < iLength1 || i2 < iLength2) {
 				oElement1 = aElements1[i1];
@@ -265,7 +275,18 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', './FormLayoutRendere
 				bEmptyRow2 = aReservedCells2[0] && (aReservedCells2[0][0] == iContainerColumns);
 
 				if ((oElement1 && oElement1.getVisible()) || (oElement2 && oElement2.getVisible()) || bEmptyRow1 || bEmptyRow2) {
-					rm.write("<tr>");
+					rm.write("<tr");
+
+					if (!bFirstVisibleFound) {
+						bFirstVisibleFound = true;
+						if (!oTitle1 && !oTitle2) {
+							rm.addClass("sapUiGridConteinerFirstRow");
+						}
+					}
+
+					rm.writeClasses();
+					rm.write(">");
+
 					if (!bEmptyRow1) {
 						if (oElement1 && oElement1.getVisible() && (!bExpandable1 || oContainer1.getExpanded())) {
 							aReservedCells1 = this.renderElement(rm, oLayout, oElement1, true, iContainerColumns, false, aReservedCells1);
