@@ -28,7 +28,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.32.11
+		 * @version 1.32.12
 		 *
 		 * @constructor
 		 * @public
@@ -310,10 +310,11 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 		DynamicSideContent.prototype.onAfterRendering = function () {
 			if (this.getContainerQuery()) {
 				this._attachContainerResizeListener();
+				this._adjustToScreenSize();
 			} else {
 				var that = this;
 				jQuery(window).resize(function() {
-					that._handleMediaChange();
+					that._adjustToScreenSize();
 				});
 			}
 			this._changeGridState();
@@ -385,7 +386,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 		 */
 		DynamicSideContent.prototype._attachContainerResizeListener = function () {
 			if (!this._sContainerResizeListener) {
-				this._sContainerResizeListener = ResizeHandler.register(this, jQuery.proxy(this._handleMediaChange, this));
+				this._sContainerResizeListener = ResizeHandler.register(this, jQuery.proxy(this._adjustToScreenSize, this));
 			}
 		};
 
@@ -444,7 +445,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 		 * Handles the screen size breakpoints.
 		 * @private
 		 */
-		DynamicSideContent.prototype._handleMediaChange = function () {
+		DynamicSideContent.prototype._adjustToScreenSize = function () {
 			if (this.getContainerQuery()){
 				this._iWindowWidth = this.$().parent().width();
 			} else {
