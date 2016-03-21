@@ -21,7 +21,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 	 * @extends sap.ui.core.Element
 	 *
 	 * @author SAP SE
-	 * @version 1.36.4
+	 * @version 1.36.5
 	 *
 	 * @constructor
 	 * @public
@@ -52,6 +52,9 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/core/EnabledP
 
 			/**
 			 * Formular controls that belong together to be displayed in one row of a <code>Form</code>.
+			 *
+			 * <b>Note:</b> Do not put any layout controls in here. This could destroy the visual layout,
+			 * keyboard support and screen-reader support.
 			 */
 			fields : {type : "sap.ui.core.Control", multiple : true, singularName : "field"}
 		}

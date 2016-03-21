@@ -26,7 +26,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	 * Use <code>LayoutData</code> to influence the layout for special cases in the Input/Display controls.
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 * @extends sap.ui.core.Control
-	 * @version 1.36.4
+	 * @version 1.36.5
 	 *
 	 * @constructor
 	 * @public
@@ -253,6 +253,9 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			 * new sap.ui.commons.TextView({text:"Weight 1",
 			 * layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:1})}),
 			 * </pre>
+			 *
+			 * <b>Note:</b> Do not put any layout controls in here. This could destroy the visual layout,
+			 * keyboard support and screen-reader support.
 			 */
 			content : {type : "sap.ui.core.Element", multiple : true, singularName : "content"},
 
