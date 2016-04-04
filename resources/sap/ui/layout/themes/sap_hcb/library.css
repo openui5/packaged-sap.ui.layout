@@ -2839,6 +2839,7 @@ html[data-sap-ui-browser^="ff"].sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapU
   padding-top: 0.4375rem;
 }
 /* on last row no padding-bottom on container content */
+.sapUiFormM > .sapUiFormResGrid > .sapUiRGLContainer > .sapUiRGLContainerCont > .sapUiFormResGridCont,
 .sapUiRespGridMedia-Std-Phone > .sapUiFormResGridLastRowM:last-child .sapUiFormResGridCont,
 .sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridLastRowM .sapUiFormResGridCont,
 .sapUiRespGridMedia-Std-Desktop > .sapUiFormResGridLastRowL .sapUiFormResGridCont,
@@ -2856,6 +2857,11 @@ html[data-sap-ui-browser^="ff"].sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapU
 .sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridFirstRowXL > .sapUiFormContainerToolbar {
   margin-top: -0.5rem;
 }
+/* only one container - reduce top padding*/
+.sapUiFormM > .sapUiFormResGrid > .sapUiFormContainerTitle,
+.sapUiFormM > .sapUiFormResGrid > .sapUiFormContainerToolbar {
+  padding-top: 0.5rem;
+}
 .sapUiSizeCompact .sapUiRespGridMedia-Std-Phone > .sapUiFormResGridFirstRowM:first-child > .sapUiFormContainerTitle,
 .sapUiSizeCompact .sapUiRespGridMedia-Std-Phone > .sapUiFormResGridFirstRowM:first-child > .sapUiFormContainerToolbar,
 .sapUiSizeCompact .sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridFirstRowM > .sapUiFormContainerTitle,
@@ -2865,6 +2871,10 @@ html[data-sap-ui-browser^="ff"].sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapU
 .sapUiSizeCompact .sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridFirstRowXL > .sapUiFormContainerTitle,
 .sapUiSizeCompact .sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridFirstRowXL > .sapUiFormContainerToolbar {
   margin-top: 0;
+}
+.sapUiSizeCompact .sapUiFormM > .sapUiFormResGrid > .sapUiFormContainerTitle,
+.sapUiSizeCompact .sapUiFormM > .sapUiFormResGrid > .sapUiFormContainerToolbar {
+  padding-top: 1rem;
 }
 /* ============================ */
 /*   MEDIUM and LARGE DEVICES   */
@@ -3658,9 +3668,18 @@ html[data-sap-ui-browser^="ff"] .sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sap
 .sapUiFormM > .sapUiFormResLayout > .sapUiRFL > .sapUiRFLRow:first-child > .sapUiRFLContainer > .sapUiRFLContainerContent > .sapUiRLContainer.sapUiFormContainerToolbar {
   margin-top: -0.5rem;
 }
+/* only one container - reduce top padding*/
+.sapUiFormM > .sapUiFormResLayout > .sapUiFormContainerTitle,
+.sapUiFormM > .sapUiFormResLayout > .sapUiFormContainerToolbar {
+  padding-top: 0.5rem;
+}
 .sapUiSizeCompact .sapUiFormM > .sapUiFormResLayout > .sapUiRFL > .sapUiRFLRow:first-child > .sapUiRFLContainer > .sapUiRFLContainerContent > .sapUiRLContainer.sapUiFormContainerTitle,
 .sapUiSizeCompact .sapUiFormM > .sapUiFormResLayout > .sapUiRFL > .sapUiRFLRow:first-child > .sapUiRFLContainer > .sapUiRFLContainerContent > .sapUiRLContainer.sapUiFormContainerToolbar {
   margin-top: 0;
+}
+.sapUiSizeCompact .sapUiFormM > .sapUiFormResLayout > .sapUiFormContainerTitle,
+.sapUiSizeCompact .sapUiFormM > .sapUiFormResLayout > .sapUiFormContainerToolbar {
+  padding-top: 1rem;
 }
 /* ===================================================== */
 /* CSS for control sap.ui.layout/form/SimpleForm.control */

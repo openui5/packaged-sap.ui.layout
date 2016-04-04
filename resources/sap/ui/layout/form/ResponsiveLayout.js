@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.36.5
+	 * @version 1.36.6
 	 *
 	 * @constructor
 	 * @public
@@ -625,7 +625,8 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 			oRFLayout._getAccessibleRole = function() {
 
 				var oContainer = sap.ui.getCore().byId(this.__myParentContainerId);
-				if (!oContainer.getToolbar() && !oContainer.getTitle() && !oContainer.getExpandable()) {
+				var oLayout = this.__myParentLayout;
+				if (oLayout._mainRFLayout && !oContainer.getToolbar() && !oContainer.getTitle() && !oContainer.getExpandable()) {
 					return "form";
 				}
 

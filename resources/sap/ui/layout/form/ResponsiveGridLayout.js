@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 	 *
 	 * This control cannot be used standalone, it only renders a <code>Form</code>, so it must be assigned to a <code>Form</code>.
 	 * @extends sap.ui.layout.form.FormLayout
-	 * @version 1.36.5
+	 * @version 1.36.6
 	 *
 	 * @constructor
 	 * @public
@@ -833,7 +833,8 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 		oGrid._getAccessibleRole = function() {
 
 			var oContainer = sap.ui.getCore().byId(this.__myParentContainerId);
-			if (!oContainer.getToolbar() && !oContainer.getTitle() && !oContainer.getExpandable()) {
+			var oLayout = this.__myParentLayout;
+			if (oLayout._mainGrid && oLayout._mainGrid.__bIsUsed && !oContainer.getToolbar() && !oContainer.getTitle() && !oContainer.getExpandable()) {
 				return "form";
 			}
 
