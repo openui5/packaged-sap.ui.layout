@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.38.1
+	 * @version 1.38.2
 	 *
 	 * @constructor
 	 * @public
@@ -477,6 +477,12 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 					// ResponsiveFlowLayout already created
 					oRFLayout = mRFLayouts[sElementId][0];
 					iLastIndex = oContainerLayout.indexOfContent(oRFLayout);
+					if (iLastIndex != iVisibleElements) {
+						// order has changed -> move it
+						oContainerLayout.removeContent(oRFLayout);
+						oContainerLayout.insertContent(oRFLayout, iVisibleElements);
+						iLastIndex == iVisibleElements;
+					}
 				} else {
 					oRFLayout = _createResponsiveFlowLayout(oLayout, oContainer, oElement);
 					oRFLayout.addStyleClass("sapUiRLElement");
