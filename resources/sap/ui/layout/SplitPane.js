@@ -21,7 +21,7 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Element'],
 	 * @extends sap.ui.core.Element
 	 *
 	 * @author SAP SE
-	 * @version 1.38.2
+	 * @version 1.38.3
 	 *
 	 * @constructor
 	 * @public
@@ -59,6 +59,17 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Element'],
 		} else {
 			return this;
 		}
+	};
+
+	SplitPane.prototype.onLayoutDataChange = function() {
+		var oParent = this.getParent();
+		if (oParent) {
+			oParent._oSplitter._delayedResize();
+		}
+	};
+
+	SplitPane.prototype._isInInterval = function (iFrom) {
+		return this.getRequiredParentWidth() <= iFrom;
 	};
 
 	return SplitPane;

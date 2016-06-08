@@ -15,7 +15,6 @@ sap.ui.define(['sap/ui/core/IconPool'],
 	var ResponsiveSplitterRenderer = {};
 	IconPool.insertFontFaceStyle();
 
-
 	ResponsiveSplitterRenderer.render = function (oRm, oControl) {
 		oRm.write("<div class='sapUiResponsiveSplitter'");
 		oRm.writeControlData(oControl);
@@ -23,10 +22,11 @@ sap.ui.define(['sap/ui/core/IconPool'],
 		oRm.addStyle("height", oControl.getHeight());
 		oRm.writeStyles();
 		oRm.write(">");
-		var aPages = oControl.getAggregation("pages");
+
+		var aPages = oControl.getAggregation("_pages");
 
 		if (aPages) {
-			oControl.getAggregation("pages").forEach(oRm.renderControl);
+			oControl.getAggregation("_pages").forEach(oRm.renderControl);
 			this.renderPaginator(oRm, oControl);
 		}
 
@@ -34,7 +34,7 @@ sap.ui.define(['sap/ui/core/IconPool'],
 	};
 
 	ResponsiveSplitterRenderer.renderPaginator = function (oRm, oControl) {
-		oRm.write("<div");
+		oRm.write("<div ");
 		oRm.addClass("sapUiResponsiveSplitterPaginator");
 		oRm.writeClasses();
 		oRm.write(">");
@@ -42,6 +42,7 @@ sap.ui.define(['sap/ui/core/IconPool'],
 
 		oRm.write("<div ");
 		oRm.addClass("sapUiResponsiveSplitterPaginatorNavButton");
+		oRm.addClass("sapUiResponsiveSplitterHiddenPaginatorButton");
 		oRm.addClass("sapUiResponsiveSplitterPaginatorButtonBack");
 		oRm.writeClasses();
 		oRm.write("></div>");
@@ -52,8 +53,11 @@ sap.ui.define(['sap/ui/core/IconPool'],
 		oRm.write(">");
 
 		for (var i = 0; i < bpCount; i++) {
-			oRm.write("<div ");
+			oRm.write("<div tabindex='0' ");
 			oRm.write("page-index='" + i + "'");
+			if (i === 0) {
+				oRm.addClass("sapUiResponsiveSplitterPaginatorSelectedButton");
+			}
 			oRm.addClass("sapUiResponsiveSplitterHiddenElement");
 			oRm.addClass("sapUiResponsiveSplitterPaginatorButton");
 			oRm.writeClasses();
@@ -64,6 +68,7 @@ sap.ui.define(['sap/ui/core/IconPool'],
 
 		oRm.write("<div ");
 		oRm.addClass("sapUiResponsiveSplitterPaginatorNavButton");
+		oRm.addClass("sapUiResponsiveSplitterHiddenPaginatorButton");
 		oRm.addClass("sapUiResponsiveSplitterPaginatorButtonForward");
 		oRm.writeClasses();
 		oRm.write("></div>");

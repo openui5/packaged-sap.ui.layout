@@ -21,7 +21,7 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Element', './Split
 	 * @extends sap.ui.core.Element
 	 *
 	 * @author SAP SE
-	 * @version 1.38.2
+	 * @version 1.38.3
 	 *
 	 * @constructor
 	 * @public
@@ -34,7 +34,7 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Element', './Split
 			/**
 			 The orientation of the Splitter
 			 */
-			orientation : { type : "sap.ui.core.Orientation", group : "Behavior", defaultValue : sap.ui.core.Orientation.Horizontal}
+			orientation : { type : "sap.ui.core.Orientation", group : "Behavior", defaultValue : sap.ui.core.Orientation.Horizontal }
 		},
 		defaultAggregation : "panes",
 		aggregations : {
@@ -63,25 +63,14 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Element', './Split
 	 */
 	PaneContainer.prototype.setOrientation = function(sOrientation) {
 		this._oSplitter.setOrientation(sOrientation);
-
 		return this.setProperty("orientation", sOrientation, true);
 	};
 
-	/**
-	 * Adds a SplitPane or a PaneContainer to the PaneContainer.
-	 * @public
-	 * @param {sap.ui.core.Element} oElement The Element to be added.
-	 * @returns {sap.ui.layout.PaneContainer} this to allow method chaining.
-	 */
-	PaneContainer.prototype.addPane = function(oElement) {
-		this.addAggregation("panes", oElement);
 
-		if (oElement instanceof sap.ui.layout.SplitPane) {
-			this._oSplitter.addAssociatedContentArea(oElement.getContent());
-		} else {
-			this._oSplitter.addAssociatedContentArea(oElement._oSplitter);
-		}
-		return this;
+	PaneContainer.prototype._getPanesInInterval = function (iFrom) {
+		return this.getPanes().filter(function(oPane) {
+			return oPane instanceof sap.ui.layout.SplitPane && oPane._isInInterval(iFrom);
+		});
 	};
 
 	/**

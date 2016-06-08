@@ -2875,6 +2875,7 @@ html[dir=rtl][data-sap-ui-browser^=ed] .sapUiRLElementWithLabel > .sapUiRFLRow:f
   width: 100%;
   display: flex;
   justify-content: center;
+  outline: none;
   height: 2.5rem;
   background-color: #000000;
 }
@@ -2912,6 +2913,17 @@ html[dir=rtl][data-sap-ui-browser^=ed] .sapUiRLElementWithLabel > .sapUiRFLRow:f
   display: block;
   margin-top: 16px;
   border-radius: 50%;
+}
+.sapUiResponsiveSplitterPaginatorButton:focus {
+  outline: none;
+}
+.sapUiResponsiveSplitterPaginatorButton:focus:before {
+  content: "";
+  position: absolute;
+  border: 1px dotted #ffffff;
+  width: 2.125rem;
+  height: 2.125rem;
+  margin: 2px 0 0 2px;
 }
 .sapUiResponsiveSplitterPaginatorButton:first-child {
   margin-left: 0;
@@ -3025,6 +3037,15 @@ html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage .sapUiLo
 .sapUiResponsiveSplitter .sapUiLoSplitterH.sapUiLoSplitter > .sapUiLoSplitterBar,
 .sapUiResponsiveSplitter .sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
   width: 0.25rem !important;
+}
+html[data-sap-ui-browser^=ie].sap-desktop .sapUiResponsiveSplitter .sapUiLoSplitterH > .sapUiLoSplitterBar:focus::after {
+  width: 2px;
+  z-index: 1;
+}
+html[data-sap-ui-browser^=ie].sap-desktop .sapUiResponsiveSplitter .sapUiLoSplitterV > .sapUiLoSplitterBar:focus::after {
+  height: 2px;
+  top: -6px;
+  z-index: 1;
 }
 /* ===================================================== */
 /* CSS for control sap.ui.layout/form/SimpleForm.control */
@@ -3872,6 +3893,17 @@ html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUi
 }
 .sapUiResponsiveSplitterPaginatorButton:after {
   background-color: #999999;
+}
+.sapUiResponsiveSplitterPaginatorButton:focus {
+  outline: none;
+}
+.sapUiResponsiveSplitterPaginatorButton:focus:before {
+  content: "";
+  position: absolute;
+  border: 2px dotted #ffffff;
+  width: 2.125rem;
+  height: 2.125rem;
+  margin: 1px 0 0 1px;
 }
 .sapUiResponsiveSplitterPaginatorButton:hover {
   background-color: #7a5100;
