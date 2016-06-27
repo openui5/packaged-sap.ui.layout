@@ -29,7 +29,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.38.3
+	 * @version 1.38.4
 	 *
 	 * @constructor
 	 * @public
@@ -606,7 +606,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library'],
 
 	Splitter.prototype._preserveHandler = function(sChannelId, sEventId, oData) {
 		var oDom = this.getDomRef();
-		if (oDom && oData.domNode.contains(oDom)) {
+		if (oDom && jQuery.contains(oData.domNode, oDom)) {
 			// Our HTML has been preserved...
 			this._isPreserved = true;
 		}
