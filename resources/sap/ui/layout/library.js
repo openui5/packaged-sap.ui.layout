@@ -19,14 +19,14 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/base/DataType',
 	 * @namespace
 	 * @name sap.ui.layout
 	 * @author SAP SE
-	 * @version 1.40.0
+	 * @version 1.40.1
 	 * @public
 	 */
 
 	// delegate further initialization of this library to the Core
 	sap.ui.getCore().initLibrary({
 		name : "sap.ui.layout",
-		version: "1.40.0",
+		version: "1.40.1",
 		dependencies : ["sap.ui.core"],
 		types: [
 			"sap.ui.layout.BackgroundDesign",
@@ -74,8 +74,8 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/base/DataType',
 				"sap.ui.layout.form.SimpleForm": {
 					"renameLabel": "sap/ui/layout/changeHandler/RenameSimpleForm",
 					"renameTitle": "sap/ui/layout/changeHandler/RenameSimpleForm",
-					"moveField": "sap/ui/layout/changeHandler/MoveSimpleForm",
-					"moveGroup": "sap/ui/layout/changeHandler/MoveSimpleForm",
+					"moveSimpleFormField": "sap/ui/layout/changeHandler/MoveSimpleForm",
+					"moveSimpleFormGroup": "sap/ui/layout/changeHandler/MoveSimpleForm",
 					"hideSimpleFormField": "sap/ui/layout/changeHandler/HideSimpleForm",
 					"unhideSimpleFormField": "sap/ui/layout/changeHandler/UnhideSimpleForm",
 					"removeSimpleFormGroup": "sap/ui/layout/changeHandler/HideSimpleForm",
