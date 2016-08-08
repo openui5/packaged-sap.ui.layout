@@ -13,7 +13,7 @@ sap.ui.define([
 	 * Change handler for hiding of a control.
 	 * @alias sap.ui.fl.changeHandler.HideControl
 	 * @author SAP SE
-	 * @version 1.40.3
+	 * @version 1.40.4
 	 * @experimental Since 1.27.0
 	 */
 	var HideForm = { };
@@ -42,7 +42,8 @@ sap.ui.define([
 				if (iStart >= 0 && index > iStart) {
 					if ((oModifier.getControlType(oField) === "sap.m.Label") ||
 							(oModifier.getControlType(oField) === "sap.ui.core.Title") ||
-							(oModifier.getControlType(oField) === "sap.ui.core.Toolbar")) {
+							(oModifier.getControlType(oField) === "sap.m.Title") ||
+							(oModifier.getControlType(oField) === "sap.m.Toolbar")) {
 						return true;
 					} else {
 						oModifier.setVisible(oField, false);
@@ -56,7 +57,8 @@ sap.ui.define([
 				}
 				if (iStart >= 0 && index > iStart) {
 					if ((oModifier.getControlType(oField) === "sap.ui.core.Title") ||
-							(oModifier.getControlType(oField) === "sap.ui.core.Toolbar")) {
+							(oModifier.getControlType(oField) === "sap.m.Title") ||
+							(oModifier.getControlType(oField) === "sap.m.Toolbar")) {
 						if (iStart === 0) {
 							oModifier.removeAggregation(oControl, "content", oField, oView);
 							oModifier.insertAggregation(oControl, "content", oField, 0, oView);
