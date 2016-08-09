@@ -26,7 +26,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	 * Use <code>LayoutData</code> to influence the layout for special cases in the Input/Display controls.
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 * @extends sap.ui.core.Control
-	 * @version 1.38.5
+	 * @version 1.38.6
 	 *
 	 * @constructor
 	 * @public
@@ -905,7 +905,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 		if (!this._aElements) {
 			this._aElements = this.getAggregation("content", []);
 		}
-		return this._aElements;
+		return this._aElements.slice();
 
 	};
 
@@ -1471,6 +1471,11 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 			var oTitle = oFormContainer.getTitle();
 			if (oTitle) {
 				aElements.push(oTitle);
+			} else {
+				var oToolbar = oFormContainer.getToolbar();
+				if (oToolbar) {
+					aElements.push(oToolbar);
+				}
 			}
 
 			var aFormElements = oFormContainer.getFormElements();
