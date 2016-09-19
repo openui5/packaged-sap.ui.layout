@@ -5,8 +5,10 @@
  */
 
 // Provides control sap.ui.layout.FixFlex.
-sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledPropagator", "sap/ui/core/ResizeHandler", "./library"],
-	function (jQuery, Control, EnabledPropagator, ResizeHandler, library) {
+sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledPropagator", "sap/ui/core/ResizeHandler",
+				"./library", 'sap/ui/core/delegate/ScrollEnablement'],
+	function (jQuery, Control, EnabledPropagator,
+				ResizeHandler, library, ScrollEnablement) {
 		"use strict";
 
 		/**
@@ -26,7 +28,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.38.7
+		 * @version 1.38.8
 		 *
 		 * @constructor
 		 * @public
@@ -79,6 +81,36 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 
 
 		EnabledPropagator.call(FixFlex.prototype);
+
+		/**
+		 * Initializes the control.
+		 * @private
+		 */
+		FixFlex.prototype.init = function () {
+			this._scroller = new ScrollEnablement(this, this.getId(), {
+				horizontal: false,
+				vertical: false
+			});
+
+			this._innerScroller = new ScrollEnablement(this, this.getId() + "-Flexible", {
+				horizontal: false,
+				vertical: false
+			});
+		};
+
+		/**
+		 * Returns the sap.ui.core.ScrollEnablement delegate which is used with this control.
+		 * @returns {sap.ui.core.ScrollEnablement}
+		 * @private
+		 */
+		FixFlex.prototype.getScrollDelegate = function () {
+
+			if (this._scroller.getVertical() || this._scroller.getHorizontal()) {
+				return this._scroller;
+			}
+
+			return this._innerScroller;
+		};
 
 		/**
 		 * Calculate height/width on the flex part when flexbox is not supported
@@ -157,9 +189,10 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 			var nFlexSize,
 				sDirection,
 				$this = this.$(),
-				nMinFlexSize = this.getMinFlexSize();
+				nMinFlexSize = this.getMinFlexSize(),
+				bIsVertical = this.getVertical();
 
-			if (this.getVertical() === true) {
+			if (bIsVertical) {
 				nFlexSize = this.$().height() - this.$("Fixed").height();
 				sDirection = "height";
 			} else {
@@ -172,6 +205,14 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 				$this.addClass("sapUiFixFlexScrolling");
 				$this.removeClass("sapUiFixFlexInnerScrolling");
 
+				if (bIsVertical) {
+					this._scroller.setVertical(false);
+					this._innerScroller.setVertical(true);
+				} else {
+					this._scroller.setHorizontal(false);
+					this._innerScroller.setHorizontal(true);
+				}
+
 				// BCP Incident-ID: 1570246771
 				if (this.$("FlexibleContainer").children().height() > nMinFlexSize) {
 					this.$("Flexible").attr("style", "min-" + sDirection + ":" + nMinFlexSize + "px");
@@ -182,27 +223,68 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 				}
 
 			} else { // Add scrolling for entire FixFlex
+
 				$this.addClass("sapUiFixFlexInnerScrolling");
 				$this.removeClass("sapUiFixFlexScrolling");
+				if (bIsVertical) {
+					this._scroller.setVertical(true);
+					this._innerScroller.setVertical(false);
+
+				} else {
+					this._scroller.setHorizontal(true);
+					this._innerScroller.setHorizontal(false);
+				}
+
 				this.$("Flexible").removeAttr("style");
 			}
 		};
 
 		/**
+		 * Clears the control dependencies.
 		 * @private
 		 */
 		FixFlex.prototype.exit = function () {
 			this._deregisterControl();
+
+			if (this._scroller) {
+				this._scroller.destroy();
+				this._scroller = null;
+			}
+
+			if (this._innerScroller) {
+				this._innerScroller.destroy();
+				this._innerScroller = null;
+			}
 		};
 
 		/**
+		 * Called before the control is rendered.
 		 * @private
 		 */
 		FixFlex.prototype.onBeforeRendering = function () {
+			var bIsVertical = this.getVertical(),
+				oScroller = this._scroller,
+				oInnerScroller = this._innerScroller;
+
 			this._deregisterControl();
+
+			if (bIsVertical) {
+				oScroller.setVertical(false);
+				oScroller.setHorizontal(false);
+
+				oInnerScroller.setVertical(true);
+				oInnerScroller.setHorizontal(false);
+			} else {
+				oScroller.setVertical(false);
+				oScroller.setHorizontal(false);
+
+				oInnerScroller.setVertical(false);
+				oInnerScroller.setHorizontal(true);
+			}
 		};
 
 		/**
+		 * Called after the control is rendered.
 		 * @private
 		 */
 		FixFlex.prototype.onAfterRendering = function () {
@@ -225,15 +307,6 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 					this._changeScrolling();
 				}
 			}
-		};
-
-		/**
-		 * @private
-		 * @param {Object} oEvent
-		 */
-		FixFlex.prototype.ontouchmove = function (oEvent) {
-			// mark the event for components that needs to know if the event was handled
-			oEvent.setMarked();
 		};
 
 		return FixFlex;
