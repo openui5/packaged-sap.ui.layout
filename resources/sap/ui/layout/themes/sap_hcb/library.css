@@ -3283,7 +3283,6 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
 /* ====================================================== */
 .sapUiVlt {
   display: inline-block;
-  overflow: hidden;
   vertical-align: top;
 }
 html[data-sap-ui-browser^="ie"] .sapUiVlt {
@@ -3340,23 +3339,27 @@ html[data-sap-ui-browser^="ie"] .sapUiVlt {
   -ms-flex-negative: 0;
   width: 40%;
 }
-.sapUiBlockLayoutBig .sapUiBlockHorizontalCellsRow,
-.sapUiBlockLayoutMedium .sapUiBlockHorizontalCellsRow {
+.sapUiBlockLayoutSizeL .sapUiBlockHorizontalCellsRow,
+.sapUiBlockLayoutSizeXL .sapUiBlockHorizontalCellsRow,
+.sapUiBlockLayoutSizeM .sapUiBlockHorizontalCellsRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-.sapUiBlockLayoutBig .sapUiBlockLayoutRow .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent,
-.sapUiBlockLayoutMedium .sapUiBlockLayoutRow .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent {
+.sapUiBlockLayoutSizeL .sapUiBlockLayoutRow .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent,
+.sapUiBlockLayoutSizeXL .sapUiBlockLayoutRow .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent,
+.sapUiBlockLayoutSizeM .sapUiBlockLayoutRow .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent {
   padding-left: 2rem;
 }
-.sapUiBlockLayoutBig .sapUiBlockLayoutRow .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent,
-.sapUiBlockLayoutMedium .sapUiBlockLayoutRow .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent {
+.sapUiBlockLayoutSizeL .sapUiBlockLayoutRow .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent,
+.sapUiBlockLayoutSizeXL .sapUiBlockLayoutRow .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent,
+.sapUiBlockLayoutSizeM .sapUiBlockLayoutRow .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent {
   padding-right: 2rem;
 }
-.sapUiBlockLayoutBig .sapUiBlockSmallCell,
-.sapUiBlockLayoutMedium .sapUiBlockSmallCell {
+.sapUiBlockLayoutSizeL .sapUiBlockSmallCell,
+.sapUiBlockLayoutSizeXL .sapUiBlockSmallCell,
+.sapUiBlockLayoutSizeM .sapUiBlockSmallCell {
   -webkit-flex-shrink: 1;
   -webkit-flex-grow: 1;
   -webkit-flex-basis: 0%;
@@ -3367,8 +3370,9 @@ html[data-sap-ui-browser^="ie"] .sapUiVlt {
   -ms-flex-negative: 1;
   -ms-flex-preferred-size: 0;
 }
-.sapUiBlockLayoutBig .sapUiBlockMediumCell,
-.sapUiBlockLayoutMedium .sapUiBlockMediumCell {
+.sapUiBlockLayoutSizeL .sapUiBlockMediumCell,
+.sapUiBlockLayoutSizeXL .sapUiBlockMediumCell,
+.sapUiBlockLayoutSizeM .sapUiBlockMediumCell {
   -webkit-flex-grow: 2;
   -webkit-flex-shrink: 1;
   -webkit-flex-basis: 0%;
@@ -3379,10 +3383,11 @@ html[data-sap-ui-browser^="ie"] .sapUiVlt {
   -ms-flex-negative: 1;
   -ms-flex-preferred-size: 0;
 }
-.sapUiBlockLayoutBig .sapUiBlockScrollingNarrowCells .sapUiBlockScrollableCell {
+.sapUiBlockLayoutSizeL .sapUiBlockScrollingNarrowCells .sapUiBlockScrollableCell,
+.sapUiBlockLayoutSizeXL .sapUiBlockScrollingNarrowCells .sapUiBlockScrollableCell {
   width: 20%;
 }
-.sapUiBlockLayoutSmall .sapUiBlockRowSCase {
+.sapUiBlockLayoutSizeS .sapUiBlockRowSCase {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3391,22 +3396,22 @@ html[data-sap-ui-browser^="ie"] .sapUiVlt {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.sapUiBlockLayoutSmall .sapUiBlockLayoutCell:not(.sapUiBlockScrollableCell) .sapUiBlockCellContent {
+.sapUiBlockLayoutSizeS .sapUiBlockLayoutCell:not(.sapUiBlockScrollableCell) .sapUiBlockCellContent {
   padding: 1rem 2rem;
 }
-.sapUiBlockLayoutSmall .sapUiBlockSmallCell {
-  width: 50%;
-}
-.sapUiBlockLayoutSmall .sapUiBlockMediumCell {
+.sapUiBlockLayoutSizeS .sapUiBlockSmallCell {
   width: 100%;
 }
-.sapUiBlockLayoutSmall .sapUiBlockScrollingRow .sapUiBlockScrollableCell:first-child .sapUiBlockCellContent {
+.sapUiBlockLayoutSizeS .sapUiBlockMediumCell {
+  width: 100%;
+}
+.sapUiBlockLayoutSizeS .sapUiBlockScrollingRow .sapUiBlockScrollableCell:first-child .sapUiBlockCellContent {
   padding-left: 2rem;
 }
-.sapUiBlockLayoutSmall .sapUiBlockScrollingRow .sapUiBlockScrollableCell:last-child .sapUiBlockCellContent {
+.sapUiBlockLayoutSizeS .sapUiBlockScrollingRow .sapUiBlockScrollableCell:last-child .sapUiBlockCellContent {
   padding-right: 2rem;
 }
-.sapUiBlockLayoutSmall .sapUiBlockScrollingRow .sapUiBlockScrollableCell {
+.sapUiBlockLayoutSizeS .sapUiBlockScrollingRow .sapUiBlockScrollableCell {
   min-width: 90%;
 }
 .sapUiBlockLayoutCell {
