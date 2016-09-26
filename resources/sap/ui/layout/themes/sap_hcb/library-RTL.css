@@ -269,7 +269,6 @@
 /* Styles for scrolling
    ========================================================================== */
 .sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible {
-  overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 .sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainer {
@@ -279,7 +278,6 @@
   overflow-y: hidden;
 }
 .sapUiFixFlexScrolling {
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: block;
 }
@@ -291,8 +289,6 @@
   height: 100%;
 }
 .sapUiFixFlexScrolling.sapUiFixFlexRow {
-  overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
 }
 .sapUiFixFlexScrolling.sapUiFixFlexRow > .sapUiFixFlexFlexible,
