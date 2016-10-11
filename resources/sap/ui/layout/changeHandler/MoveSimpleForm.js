@@ -13,7 +13,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 			 *
 			 * @alias sap.ui.fl.changeHandler.MoveElements
 			 * @author SAP SE
-			 * @version 1.42.2
+			 * @version 1.42.3
 			 * @experimental Since 1.34.0
 			 */
 			var MoveSimpleForm = {};
@@ -33,6 +33,9 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 			 * @param {sap.ui.core.Control}
 			 *          oSourceParent control that matches the change selector for applying the change, which is the source of
 			 *          the move
+			 * @param {object}
+			 *          mPropertyBag map containing the control modifier object (either sap.ui.fl.changeHandler.JsControlTreeModifier or
+	         *          sap.ui.fl.changeHandler.XmlTreeModifier), the view object where the controls are embedded and the application component
 			 * @public
 			 */
 			MoveSimpleForm.applyChange = function(oChange, oSimpleForm, mPropertyBag) {
@@ -40,8 +43,8 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 				var oView = mPropertyBag.view;
 				var oAppComponent = mPropertyBag.appComponent;
 
-				var oContent = oChange.getContent();
-				var mMovedElement = oContent.movedElements[0];
+				var oChangeContent = oChange.getContent();
+				var mMovedElement = oChangeContent.movedElements[0];
 				var aContent = oModifier.getAggregation(oSimpleForm, MoveSimpleForm.CONTENT_AGGREGATION);
 
 				if (oChange.getChangeType() === MoveSimpleForm.CHANGE_TYPE_MOVE_FIELD) {
@@ -138,9 +141,11 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 			 *          oChange change object to be completed
 			 * @param {object}
 			 *          mSpecificChangeInfo as an empty object since no additional attributes are required for this operation
+			 * @param {object}
+			 *          mPropertyBag map containing the application component
 			 * @public
 			 */
-			MoveSimpleForm.completeChangeContent = function(oChange, mSpecificChangeInfo, oModifier) {
+			MoveSimpleForm.completeChangeContent = function(oChange, mSpecificChangeInfo, mPropertyBag) {
 				var mStableChangeInfo;
 
 				var oSimpleForm = mSpecificChangeInfo.source.publicParent;
@@ -160,17 +165,17 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 				}
 				if (oSimpleForm && mMovedElement.element && oTarget.parent) {
 					if (mSpecificChangeInfo.changeType === "moveSimpleFormGroup") {
-						mStableChangeInfo = fnMoveFormContainer(oSimpleForm, mMovedElement, oSource, oTarget);
+						mStableChangeInfo = fnMoveFormContainer(oSimpleForm, mMovedElement, oSource, oTarget, mPropertyBag);
 					} else if (mSpecificChangeInfo.changeType === "moveSimpleFormField") {
-						mStableChangeInfo = fnMoveFormElement(oSimpleForm, mMovedElement, oSource, oTarget);
+						mStableChangeInfo = fnMoveFormElement(oSimpleForm, mMovedElement, oSource, oTarget, mPropertyBag);
 					}
 				} else {
 					jQuery.sap.log.error("Element not found. This may caused by an instable id!");
 				}
 
-				var mChangeData = oChange.getDefinition();
-				mChangeData.content.targetSelector = mStableChangeInfo.targetSelector;
-				mChangeData.content.movedElements = mStableChangeInfo.movedElements;
+				var oChangeDefinition = oChange.getDefinition();
+				oChangeDefinition.content.targetSelector = mStableChangeInfo.targetSelector;
+				oChangeDefinition.content.movedElements = mStableChangeInfo.movedElements;
 			};
 
 			var fnMapGroupIndexToContentAggregationIndex = function(oModifier, aStopToken, aContent, iGroupIndex) {
@@ -238,12 +243,12 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 				return aResult;
 			};
 
-			var fnMoveFormContainer = function(oSimpleForm, mMovedElement, oSource, oTarget) {
+			var fnMoveFormContainer = function(oSimpleForm, mMovedElement, oSource, oTarget, mPropertyBag) {
 
 				var oMovedGroupTitle = fnGetGroupHeader(mMovedElement.element);
-				var oSimpleFormSelector = JsControlTreeModifier.getSelector(oSimpleForm);
+				var oSimpleFormSelector = JsControlTreeModifier.getSelector(oSimpleForm, mPropertyBag.appComponent);
 				var mMovedSimpleFormElement = {
-					elementSelector : JsControlTreeModifier.getSelector(oMovedGroupTitle),
+					elementSelector : JsControlTreeModifier.getSelector(oMovedGroupTitle, mPropertyBag.appComponent),
 					source : {
 						groupIndex : mMovedElement.sourceIndex
 					},
@@ -268,14 +273,14 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 				return oResult;
 			};
 
-			var fnMoveFormElement = function(oSimpleForm, mMovedElement, oSource, oTarget) {
+			var fnMoveFormElement = function(oSimpleForm, mMovedElement, oSource, oTarget, mPropertyBag) {
 
-				var oSimpleFormSelector = JsControlTreeModifier.getSelector(oSimpleForm);
-				var oLabelSelector = JsControlTreeModifier.getSelector(mMovedElement.element.getLabel());
+				var oSimpleFormSelector = JsControlTreeModifier.getSelector(oSimpleForm, mPropertyBag.appComponent);
+				var oLabelSelector = JsControlTreeModifier.getSelector(mMovedElement.element.getLabel(), mPropertyBag.appComponent);
 				var oTargetGroupHeader = fnGetGroupHeader(oTarget.parent);
 				var oSourceGroupHeader = fnGetGroupHeader(oSource.parent);
-				var oTargetGroupSelector = JsControlTreeModifier.getSelector(oTargetGroupHeader);
-				var oSourceGroupSelector = JsControlTreeModifier.getSelector(oSourceGroupHeader);
+				var oTargetGroupSelector = JsControlTreeModifier.getSelector(oTargetGroupHeader, mPropertyBag.appComponent);
+				var oSourceGroupSelector = JsControlTreeModifier.getSelector(oSourceGroupHeader, mPropertyBag.appComponent);
 
 				var oMovedElement = {
 					element : oLabelSelector,

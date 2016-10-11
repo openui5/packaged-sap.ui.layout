@@ -205,9 +205,10 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex: 1 1;
-  flex-grow: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
@@ -264,17 +265,22 @@
 /* Styles for scrolling
    ========================================================================== */
 .sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible {
-  overflow: auto;
   -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
 .sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainer {
   overflow-x: hidden;
+  overflow-y: visible;
+  position: static;
+  width: 100%;
+}
+.sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainerHeight {
+  height: 100%;
 }
 .sapUiFixFlexInnerScrolling.sapUiFixFlexRow > .sapUiFixFlexFlexible {
   overflow-y: hidden;
 }
 .sapUiFixFlexScrolling {
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: block;
 }
@@ -286,8 +292,6 @@
   height: 100%;
 }
 .sapUiFixFlexScrolling.sapUiFixFlexRow {
-  overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
 }
 .sapUiFixFlexScrolling.sapUiFixFlexRow > .sapUiFixFlexFlexible,
@@ -3279,9 +3283,6 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
 .sapUiVlt {
   display: inline-block;
   vertical-align: top;
-}
-html[data-sap-ui-browser^="ie"] .sapUiVlt {
-  vertical-align: baseline;
 }
 /* mixin call for creating container content padding classes (arguments: rootContainer, contentSelector) */
 .sapUiVlt.sapUiContentPadding  {
