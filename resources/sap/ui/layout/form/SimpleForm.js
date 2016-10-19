@@ -26,7 +26,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	 * Use <code>LayoutData</code> to influence the layout for special cases in the Input/Display controls.
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 * @extends sap.ui.core.Control
-	 * @version 1.40.8
+	 * @version 1.40.10
 	 *
 	 * @constructor
 	 * @public
@@ -442,6 +442,12 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 		this._bChangedByMe = true;
 		oElement = this.validateAggregation("content", oElement, /* multiple */ true);
 
+		if (this.indexOfContent(oElement) >= 0) {
+			// element is already there, remove before adding it
+			jQuery.sap.log.warning("SimpleForm.addContent: Content element '" + oElement + "' already assigned. Please remove before adding!", this);
+			this.removeContent(oElement);
+		}
+
 		if (!this._aElements) {
 			this._aElements = [];
 		}
@@ -522,6 +528,12 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	SimpleForm.prototype.insertContent = function(oElement, iIndex) {
 
 		oElement = this.validateAggregation("content", oElement, /* multiple */ true);
+
+		if (this.indexOfContent(oElement) >= 0) {
+			// element is already there, remove before insert it
+			jQuery.sap.log.warning("SimpleForm.insertContent: Content element '" + oElement + "' already assigned. Please remove before insert!", this);
+			this.removeContent(oElement);
+		}
 
 		if (!this._aElements) {
 			this._aElements = [];

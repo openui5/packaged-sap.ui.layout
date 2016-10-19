@@ -753,6 +753,6 @@
     "sapMeOverlapCalendarIndicator": "#ffffff",
     "sapMeCalendarLegendIconCollapse": "collapse",
     "sapMeCalendarLegendIconExpand": "expand",
-    "sapUiFormContainerExpImageURL": "sap-icon://expand-group",
-    "sapUiFormContainerColImageURL": "sap-icon://collapse-group"
+    "sapUiFormContainerExpImageURL": "url(\"sap-icon://expand-group\")",
+    "sapUiFormContainerColImageURL": "url(\"sap-icon://collapse-group\")"
 }
