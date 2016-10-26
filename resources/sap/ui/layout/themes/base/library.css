@@ -268,14 +268,11 @@
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }
-.sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainer {
+.sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainerGrowing {
   overflow-x: hidden;
   overflow-y: visible;
-  position: static;
   width: 100%;
-}
-.sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainerHeight {
-  height: 100%;
+  position: static;
 }
 .sapUiFixFlexInnerScrolling.sapUiFixFlexRow > .sapUiFixFlexFlexible {
   overflow-y: hidden;
@@ -3343,25 +3340,15 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
   display: -ms-flexbox;
   display: flex;
 }
-.sapUiBlockLayoutSizeL .sapUiBlockLayoutRow .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent,
-.sapUiBlockLayoutSizeXL .sapUiBlockLayoutRow .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent,
-.sapUiBlockLayoutSizeM .sapUiBlockLayoutRow .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent {
-  padding-left: 2rem;
-}
-.sapUiBlockLayoutSizeL .sapUiBlockLayoutRow .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent,
-.sapUiBlockLayoutSizeXL .sapUiBlockLayoutRow .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent,
-.sapUiBlockLayoutSizeM .sapUiBlockLayoutRow .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent {
-  padding-right: 2rem;
-}
 .sapUiBlockLayoutSizeL .sapUiBlockSmallCell,
 .sapUiBlockLayoutSizeXL .sapUiBlockSmallCell,
 .sapUiBlockLayoutSizeM .sapUiBlockSmallCell {
   -webkit-flex-shrink: 1;
   -webkit-flex-grow: 1;
-  -webkit-flex-basis: 0%;
+  -webkit-flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 0%;
+  flex-basis: 0;
   -ms-flex-positive: 1;
   -ms-flex-negative: 1;
   -ms-flex-preferred-size: 0;
@@ -3371,17 +3358,17 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
 .sapUiBlockLayoutSizeM .sapUiBlockMediumCell {
   -webkit-flex-grow: 2;
   -webkit-flex-shrink: 1;
-  -webkit-flex-basis: 0%;
+  -webkit-flex-basis: 0;
   flex-grow: 2;
   flex-shrink: 1;
-  flex-basis: 0%;
+  flex-basis: 0;
   -ms-flex-positive: 2;
   -ms-flex-negative: 1;
   -ms-flex-preferred-size: 0;
 }
 .sapUiBlockLayoutSizeL .sapUiBlockScrollingNarrowCells .sapUiBlockScrollableCell,
 .sapUiBlockLayoutSizeXL .sapUiBlockScrollingNarrowCells .sapUiBlockScrollableCell {
-  width: 20%;
+  width: 25%;
 }
 .sapUiBlockLayoutSizeS .sapUiBlockRowSCase {
   display: -webkit-box;
@@ -3391,9 +3378,6 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-}
-.sapUiBlockLayoutSizeS .sapUiBlockLayoutCell:not(.sapUiBlockScrollableCell) .sapUiBlockCellContent {
-  padding: 1rem 2rem;
 }
 .sapUiBlockLayoutSizeS .sapUiBlockSmallCell {
   width: 100%;
@@ -3445,7 +3429,6 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
   box-sizing: border-box;
 }
 .sapUiBlockCellTitle {
-  color: #a9a9a9;
   font-weight: normal;
   font-size: x-large;
   margin-bottom: 1rem;
