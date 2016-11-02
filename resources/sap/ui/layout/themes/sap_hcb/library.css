@@ -273,14 +273,11 @@
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }
-.sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainer {
+.sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainerGrowing {
   overflow-x: hidden;
   overflow-y: visible;
-  position: static;
   width: 100%;
-}
-.sapUiFixFlexInnerScrolling > .sapUiFixFlexFlexible .sapUiFixFlexFlexibleContainerHeight {
-  height: 100%;
+  position: static;
 }
 .sapUiFixFlexInnerScrolling.sapUiFixFlexRow > .sapUiFixFlexFlexible {
   overflow-y: hidden;

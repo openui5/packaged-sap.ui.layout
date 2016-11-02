@@ -28,7 +28,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.38.9
+		 * @version 1.38.10
 		 *
 		 * @constructor
 		 * @public
@@ -255,9 +255,9 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 			}
 
 			if (containerHeight > childrenHeight) {
-				$flexibleContainer.addClass('sapUiFixFlexFlexibleContainerHeight');
+				$flexibleContainer.removeClass('sapUiFixFlexFlexibleContainerGrowing');
 			} else {
-				$flexibleContainer.removeClass('sapUiFixFlexFlexibleContainerHeight');
+				$flexibleContainer.addClass('sapUiFixFlexFlexibleContainerGrowing');
 			}
 		};
 
