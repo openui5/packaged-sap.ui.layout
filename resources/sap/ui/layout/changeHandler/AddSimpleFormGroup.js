@@ -13,7 +13,7 @@ sap.ui.define([
 	 * Change handler for adding a smart form group.
 	 * @alias sap.ui.fl.changeHandler.AddGroup
 	 * @author SAP SE
-	 * @version 1.40.12
+	 * @version 1.40.13
 	 * @experimental Since 1.27.0
 	 */
 	var AddGroup = {};
