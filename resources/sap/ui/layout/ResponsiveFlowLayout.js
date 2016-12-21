@@ -22,7 +22,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/Interval
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.40.13
+	 * @version 1.40.14
 	 *
 	 * @constructor
 	 * @public
@@ -74,8 +74,10 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/Interval
 			delete this._resizeHandlerComputeWidthsID;
 			delete this._proxyComputeWidths;
 
-			this.oRm.destroy();
-			delete this.oRm;
+			if (this.oRm) {
+				this.oRm.destroy();
+				delete this.oRm;
+			}
 
 			delete this._$DomRef;
 			delete this._oDomRef;
