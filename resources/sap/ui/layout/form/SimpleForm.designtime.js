@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -55,25 +55,19 @@ sap.ui.define([], function() {
 				inHiddenTree : true,
 				getIndex : function(oSimpleForm, oFormContainer) {
 					var iIndex = 0;
-					var aContent = oSimpleForm.getContent();
+					var aFormContainers = oSimpleForm.getAggregation("form").getFormContainers();
 
-					if (oSimpleForm.getMetadata().getName() === "sap.ui.layout.form.SimpleForm" && !oFormContainer) {
-						iIndex = aContent.length;
-					} else if (oFormContainer && oFormContainer.getMetadata().getName() === "sap.ui.layout.form.FormContainer") {
-						var oTitle = oFormContainer.getTitle();
-						if (oTitle !== null) {
-							var iTitleIndex = aContent.indexOf(oTitle);
-							aContent.some(function(oField, index) {
-								if (oField instanceof sap.ui.core.Title && index > iTitleIndex) {
-									iIndex = index;
-									return true;
-								}
-							});
-							if (iIndex === 0) {
-								iIndex = aContent.length;
-							}
+					if (oFormContainer) {
+						iIndex = aFormContainers.indexOf(oFormContainer) + 1;
+					} else {
+						var oTitle = aFormContainers[aFormContainers.length - 1].getTitle();
+						// if there is no Title in the FormContainer, the SimpleForm is empty and
+						// the index has to be 0, otherwise the SimpleForm doesn't behave as expected.
+						if (oTitle !== null ) {
+							iIndex = aFormContainers.length;
 						}
 					}
+
 					return iIndex;
 				},
 				ignore : false,

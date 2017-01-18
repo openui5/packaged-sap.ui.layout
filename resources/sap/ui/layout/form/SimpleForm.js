@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -26,7 +26,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	 * Use <code>LayoutData</code> to influence the layout for special cases in the Input/Display controls.
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 * @extends sap.ui.core.Control
-	 * @version 1.44.3
+	 * @version 1.44.5
 	 *
 	 * @constructor
 	 * @public
@@ -439,7 +439,6 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 
 	SimpleForm.prototype.addContent = function(oElement) {
 
-		this._bChangedByMe = true;
 		oElement = this.validateAggregation("content", oElement, /* multiple */ true);
 
 		if (this.indexOfContent(oElement) >= 0) {
@@ -453,6 +452,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 		}
 
 		// try to find corresponding FormElement and FormContainer to update them
+		this._bChangedByMe = true;
 		var iLength = this._aElements.length;
 		var oLastElement;
 		var oForm = this.getAggregation("form");

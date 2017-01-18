@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -28,7 +28,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.44.3
+		 * @version 1.44.5
 		 *
 		 * @constructor
 		 * @public
@@ -200,7 +200,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 			}
 
 			// Add scrolling for entire FixFlex
-			if (nFlexSize < parseInt(this.getMinFlexSize(), 10)) {
+			if (nFlexSize <= parseInt(this.getMinFlexSize(), 10)) {
 				$this.addClass("sapUiFixFlexScrolling");
 				$this.removeClass("sapUiFixFlexInnerScrolling");
 
@@ -292,8 +292,13 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 			oScroller.setVertical(false);
 			oScroller.setHorizontal(false);
 
-			oInnerScroller.setVertical(true);
-			oInnerScroller.setHorizontal(true);
+			if (this.getVertical()) {
+				oInnerScroller.setVertical(true);
+				oInnerScroller.setHorizontal(false);
+			} else {
+				oInnerScroller.setVertical(false);
+				oInnerScroller.setHorizontal(true);
+			}
 		};
 
 		/**

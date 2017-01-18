@@ -1,11 +1,11 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2016 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 /* =========================== */
@@ -3438,6 +3438,45 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
   font-size: 20px;
   margin-bottom: 1rem;
   margin-top: 0rem;
+}
+/* mixin call for creating container content padding classes (arguments: rootContainer, contentSelector) */
+.sapUiBlockLayoutCell.sapUiContentPadding > .sapUiBlockCellContent {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+@media (max-width: 599px) {
+  .sapMSplitContainerHideMode > .sapMSplitContainerDetail .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent,
+  .sapMSplitContainerPortrait > .sapMSplitContainerDetail .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent,
+  .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent {
+    padding: 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .sapMSplitContainerHideMode > .sapMSplitContainerDetail .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent,
+  .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1024px) {
+  .sapMSplitContainerHideMode > .sapMSplitContainerDetail .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent,
+  .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+  }
+}
+.sapMSplitContainerMaster .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent {
+  padding: 0;
+}
+.sapMSplitContainerDetail .sapUiBlockLayoutCell.sapUiResponsiveContentPadding > .sapUiBlockCellContent {
+  padding: 1rem;
+}
+.sapUiBlockLayoutCell.sapUiNoContentPadding > .sapUiBlockCellContent {
+  padding: 0;
+}
+/* override for standard padding: 2rem for BlockLayoutCell */
+.sapUiBlockLayoutCell.sapUiContentPadding > .sapUiBlockCellContent {
+  padding: 2rem;
 }
 .sapUiBlockLayout .sapUiFormResLayout > div {
   background-color: inherit;
