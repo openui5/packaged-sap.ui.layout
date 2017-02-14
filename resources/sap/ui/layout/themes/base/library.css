@@ -2880,8 +2880,7 @@ html[dir=rtl][data-sap-ui-browser^=ed] .sapUiRLElementWithLabel > .sapUiRFLRow:f
   background-color: #ffffff;
 }
 .sapUiRSVisiblePaginator .sapUiResponsiveSplitterPage {
-  min-height: calc(100% - 2.5rem);
-  height: auto;
+  height: calc(100% - 2.5rem);
 }
 .sapUiRSVisiblePaginator .sapUiResponsiveSplitterPaginator.sapUiResponsiveSplitterWithNavButtons {
   justify-content: space-between;
