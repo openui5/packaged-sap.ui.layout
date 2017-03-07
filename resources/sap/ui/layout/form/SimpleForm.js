@@ -19,7 +19,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	 * The <code>SimpleForm</code> provides an easy-to-use API to create simple forms.
 	 * Inside a <code>SimpleForm</code>, a <code>Form</code> control is created along with its <code>FormContainers</code> and <code>FormElements</code>, but the complexity in the API is removed.
 	 * <ul>
-	 * <li>A new <code>Title</code> or <code>TabStrip</code> starts a new group (<code>FormContainer</code>) in the form.</li>
+	 * <li>A new <code>Title</code> or <code>Toolbar</code> starts a new group (<code>FormContainer</code>) in the form.</li>
 	 * <li>A new <code>Label</code> starts a new row (<code>FormElement</code>) in the form.</li>
 	 * <li>All other controls will be assigned to the row (<code>FormElement</code>) that started with the last label.</li>
 	 * </ul>
@@ -27,7 +27,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	 *
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 * @extends sap.ui.core.Control
-	 * @version 1.46.3
+	 * @version 1.46.4
 	 *
 	 * @constructor
 	 * @public
