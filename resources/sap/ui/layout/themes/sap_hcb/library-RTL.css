@@ -3408,6 +3408,7 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 .sapUiBlockCellCenteredContent {
   align-self: center;
