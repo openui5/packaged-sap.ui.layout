@@ -13,12 +13,25 @@ sap.ui.define([
 		 * Change handler for adding a simple form group.
 		 * @alias sap.ui.layout.changeHandler.AddSimpleFormGroup
 		 * @author SAP SE
-		 * @version 1.48.0
+		 * @version 1.48.1
 		 * @experimental Since 1.27.0
 		 */
 		var AddSimpleFormGroup = {};
 
 		AddSimpleFormGroup.CONTENT_AGGREGATION = "content";
+
+		var fnFirstGroupWithoutTitle = function(oModifier, aStopToken, aContent) {
+			for (var i = 0; i < aContent.length; i++) {
+				var sType = oModifier.getControlType(aContent[i]);
+				if (aStopToken.indexOf(sType) === -1) {
+					if (aContent[i].getVisible()) {
+						return true;
+					}
+				} else {
+					return false;
+				}
+			}
+		};
 
 		var fnMapGroupIndexToContentAggregationIndex = function(oModifier, aStopToken, aContent, iGroupIndex) {
 			var oResult;
@@ -27,6 +40,10 @@ sap.ui.define([
 			// Empty simpleform case, when the title is null
 			if (iGroupIndex === 0) {
 				return iGroupIndex;
+			}
+
+			if (fnFirstGroupWithoutTitle(oModifier, aStopToken, aContent)) {
+				iCurrentGroupIndex++;
 			}
 
 			for (var i = 0; i < aContent.length; i++) {

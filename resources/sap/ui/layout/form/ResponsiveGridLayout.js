@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 	 *
 	 * This control cannot be used stand-alone, it just renders a <code>Form</code>, so it must be assigned to a <code>Form</code> using the <code>layout</code> aggregation.
 	 * @extends sap.ui.layout.form.FormLayout
-	 * @version 1.48.0
+	 * @version 1.48.1
 	 *
 	 * @constructor
 	 * @public
@@ -352,7 +352,8 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 
 		FormLayout.prototype.contentOnAfterRendering.apply(this, arguments);
 
-		if (oControl.getWidth && ( !oControl.getWidth() || oControl.getWidth() == "auto" ) && (!oControl.getFormShouldNotAdjustWidth || !oControl.getFormShouldNotAdjustWidth())) {
+		if (oControl.getWidth && ( !oControl.getWidth() || oControl.getWidth() == "auto" ) &&
+				(!oControl.getFormDoNotAdjustWidth || !oControl.getFormDoNotAdjustWidth())) {
 			oControl.$().css("width", "100%");
 		}
 

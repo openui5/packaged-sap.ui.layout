@@ -21,9 +21,6 @@ sap.ui.define([],
 			remove: {
 				changeType: "hideControl"
 			},
-			reveal: {
-				changeType: "unhideControl"
-			},
 			rename: {
 				changeType: "renameGroup",
 				domRef: function (oFormContainer) {

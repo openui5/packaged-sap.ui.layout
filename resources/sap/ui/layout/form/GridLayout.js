@@ -29,7 +29,7 @@ sap.ui.define(['jquery.sap.global', './FormLayout', './GridContainerData', './Gr
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.48.0
+	 * @version 1.48.1
 	 *
 	 * @constructor
 	 * @public
@@ -82,7 +82,7 @@ sap.ui.define(['jquery.sap.global', './FormLayout', './GridContainerData', './Gr
 
 		FormLayout.prototype.contentOnAfterRendering.apply(this, arguments);
 
-		if (!oControl.getFormShouldNotAdjustWidth || !oControl.getFormShouldNotAdjustWidth()) {
+		if (!oControl.getFormDoNotAdjustWidth || !oControl.getFormDoNotAdjustWidth()) {
 			oControl.$().css("width", "100%");
 		}
 
