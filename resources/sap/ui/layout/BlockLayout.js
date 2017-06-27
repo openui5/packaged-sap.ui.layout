@@ -54,7 +54,7 @@ sap.ui.define(['sap/ui/core/Control', './library'],
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.48.2
+		 * @version 1.48.3
 		 *
 		 * @constructor
 		 * @public
@@ -105,7 +105,6 @@ sap.ui.define(['sap/ui/core/Control', './library'],
 		 * Resize handler is being attached to the control after the rendering
 		 */
 		BlockLayout.prototype.onAfterRendering = function () {
-			this._parentResizeHandler = sap.ui.core.ResizeHandler.register(this, this._onParentResize.bind(this));
 			this._onParentResize();
 		};
 
@@ -141,6 +140,7 @@ sap.ui.define(['sap/ui/core/Control', './library'],
 				iWidth = domRef.clientWidth,
 				mSizes = BlockLayout.CONSTANTS.SIZES;
 
+			this._detachResizeHandler();
 			this._removeBreakpointClasses();
 
 			// Put additional styles according to SAP_STANDARD_EXTENDED from sap.ui.Device.media.RANGESETS
@@ -151,6 +151,8 @@ sap.ui.define(['sap/ui/core/Control', './library'],
 					break;
 				}
 			}
+
+			jQuery.sap.delayedCall(0, this, "_attachResizeHandler");
 		};
 
 		/**
@@ -164,6 +166,16 @@ sap.ui.define(['sap/ui/core/Control', './library'],
 				if (mSizes.hasOwnProperty(prop)) {
 					this.removeStyleClass("sapUiBlockLayoutSize" + prop, true);
 				}
+			}
+		};
+
+		/**
+		 * Attaches resize handler to the parent
+		 * @private
+		 */
+		BlockLayout.prototype._attachResizeHandler = function () {
+			if (!this._parentResizeHandler) {
+				this._parentResizeHandler = sap.ui.core.ResizeHandler.register(this, this._onParentResize.bind(this));
 			}
 		};
 
