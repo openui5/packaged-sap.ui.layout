@@ -13,7 +13,7 @@ sap.ui.define([
 	 * Change handler for hiding of a control.
 	 * @alias sap.ui.fl.changeHandler.HideControl
 	 * @author SAP SE
-	 * @version 1.48.3
+	 * @version 1.48.4
 	 * @experimental Since 1.27.0
 	 */
 	var UnhideForm = { };
@@ -77,10 +77,13 @@ sap.ui.define([
 		if (oSpecificChangeInfo.sUnhideId) {
 			var oUnhideElement = sap.ui.getCore().byId(oSpecificChangeInfo.sUnhideId);
 			oChangeDefinition.content.elementSelector = JsControlTreeModifier.getSelector(oUnhideElement, mPropertyBag.appComponent);
+			oChangeWrapper.addDependentControl(oUnhideElement, "elementSelector", mPropertyBag);
 		} else if (oSpecificChangeInfo.revealedElementId ) {
 			//translate from FormElement (unstable id) to the label control (stable id and in public aggregation)
 			var oFormElement = sap.ui.getCore().byId(oSpecificChangeInfo.revealedElementId || oSpecificChangeInfo.sUnhideId);
-			oChangeDefinition.content.elementSelector = JsControlTreeModifier.getSelector(oFormElement.getLabel(), mPropertyBag.appComponent);
+			var oLabel = oFormElement.getLabel();
+			oChangeDefinition.content.elementSelector = JsControlTreeModifier.getSelector(oLabel, mPropertyBag.appComponent);
+			oChangeWrapper.addDependentControl(oLabel, "elementSelector", mPropertyBag);
 		} else {
 			throw new Error("oSpecificChangeInfo.revealedElementId attribute required");
 		}

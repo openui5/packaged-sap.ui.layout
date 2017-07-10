@@ -382,6 +382,10 @@ html.sap-desktop .sapUiFioriObjectPage > section > .sapUiForm {
   padding: 0 1rem;
   box-sizing: border-box;
 }
+.sapUiFormElementLbl {
+  font-size: 1px;
+  /* To prevent larger DIV because of invisible strut character*/
+}
 /* ========================================= */
 /* CSS for control sap.ui.layout/FormLayout  */
 /* Base theme                                */

@@ -180,5 +180,22 @@
         "references": []
       }
     ]
+  },
+  "1.48.4": {
+    "date": "July 2017",
+    "notes": [
+      {
+        "id": "177134ec66f723fd88f3c623e431b4d8ef9ac431",
+        "type": "FEATURE",
+        "text": " Form: adapt vertical alignment to current design",
+        "references": []
+      },
+      {
+        "id": "7dd05cf57020fe114c876cc962c10eff0851812c",
+        "type": "FIX",
+        "text": " sap.ui.fl changeHandler needs to store dependencies",
+        "references": []
+      }
+    ]
   }
 }
