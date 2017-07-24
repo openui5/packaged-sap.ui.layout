@@ -14,7 +14,7 @@ sap.ui.define([
 	 * Change handler for hiding of a control.
 	 * @alias sap.ui.fl.changeHandler.HideControl
 	 * @author SAP SE
-	 * @version 1.46.11
+	 * @version 1.46.12
 	 * @experimental Since 1.27.0
 	 */
 	var HideForm = { };
@@ -148,6 +148,7 @@ sap.ui.define([
 		if (oSpecificChangeInfo.removedElement && oSpecificChangeInfo.removedElement.id) {
 			var oStableElement = this._getStableElement(sap.ui.getCore().byId(oSpecificChangeInfo.removedElement.id));
 			oChange.content.elementSelector = JsControlTreeModifier.getSelector(oStableElement, mPropertyBag.appComponent);
+			oChangeWrapper.addDependentControl(oStableElement, "elementSelector", mPropertyBag);
 		} else {
 			throw new Error("oSpecificChangeInfo.removedElement.id attribute required");
 		}
