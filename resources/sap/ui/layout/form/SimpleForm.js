@@ -26,7 +26,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 	 * Use <code>LayoutData</code> to influence the layout for special cases in the Input/Display controls.
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 * @extends sap.ui.core.Control
-	 * @version 1.38.24
+	 * @version 1.38.25
 	 *
 	 * @constructor
 	 * @public
@@ -801,7 +801,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/Respon
 				var iElementIndex = oFormContainer.indexOfFormElement(oFormElement);
 				if (iElementIndex == 0) {
 					// its the first Element of the container -> just remove label
-					if (oFormElement.getFields().lenght == 0) {
+					if (oFormElement.getFields().length == 0) {
 						// FormElement has no fields -> just delete
 						oFormContainer.removeFormElement(oFormElement);
 						oFormElement.destroy();
