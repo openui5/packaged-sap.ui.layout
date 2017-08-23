@@ -282,9 +282,6 @@
 		https://github.com/angular/material/issues/6841 */
   min-height: 0;
   min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
