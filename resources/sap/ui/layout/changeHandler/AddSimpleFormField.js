@@ -21,7 +21,7 @@ sap.ui.define([
 	 *
 	 * @author SAP SE
 	 *
-	 * @version 1.50.0
+	 * @version 1.50.1
 	 *
 	 * @experimental Since 1.49.0 This class is experimental and provides only limited functionality. Also the API might be
 	 *               changed in future.
@@ -48,7 +48,7 @@ sap.ui.define([
 		var oChangeDefinition = oChange.getDefinition();
 		var oTargetContainerHeader = oChange.getDependentControl("targetContainerHeader", mPropertyBag);
 		var mChangeHandlerSettings = ChangeHandlerMediator.getChangeHandlerSettings({
-			"scenario" : "addODataField",
+			"scenario" : "addODataFieldWithLabel",
 			"oDataServiceVersion" : oChangeDefinition.content && oChangeDefinition.content.oDataServiceVersion
 		});
 

@@ -3657,43 +3657,9 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
   flex-shrink: 0;
   width: 40%;
 }
-.sapUiBlockLayoutSizeL .sapUiBlockHorizontalCellsRow,
-.sapUiBlockLayoutSizeXL .sapUiBlockHorizontalCellsRow,
-.sapUiBlockLayoutSizeM .sapUiBlockHorizontalCellsRow {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-}
-.sapUiBlockLayoutSizeL .sapUiBlockSmallCell,
-.sapUiBlockLayoutSizeXL .sapUiBlockSmallCell,
-.sapUiBlockLayoutSizeM .sapUiBlockSmallCell {
-  -webkit-flex-shrink: 1;
-  -webkit-flex-grow: 1;
-  -webkit-flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-}
-.sapUiBlockLayoutSizeL .sapUiBlockMediumCell,
-.sapUiBlockLayoutSizeXL .sapUiBlockMediumCell,
-.sapUiBlockLayoutSizeM .sapUiBlockMediumCell {
-  -webkit-flex-grow: 2;
-  -webkit-flex-shrink: 1;
-  -webkit-flex-basis: 0;
-  flex-grow: 2;
-  flex-shrink: 1;
-  flex-basis: 0;
-}
 .sapUiBlockLayoutSizeL .sapUiBlockScrollingNarrowCells .sapUiBlockScrollableCell,
 .sapUiBlockLayoutSizeXL .sapUiBlockScrollingNarrowCells .sapUiBlockScrollableCell {
   width: 25%;
-}
-.sapUiBlockLayoutSizeS .sapUiBlockRowSCase {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .sapUiBlockLayoutSizeS .sapUiBlockSmallCell {
   width: 100%;

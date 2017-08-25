@@ -42,7 +42,7 @@ sap.ui.define(["jquery.sap.global", "./library", "sap/ui/core/Control", "./Respo
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.50.0
+	 * @version 1.50.1
 	 *
 	 * @constructor
 	 * @public
