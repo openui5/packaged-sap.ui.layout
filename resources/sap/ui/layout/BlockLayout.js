@@ -54,7 +54,7 @@ sap.ui.define(['sap/ui/core/Control', './library'],
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.48.6
+		 * @version 1.48.7
 		 *
 		 * @constructor
 		 * @public
@@ -111,6 +111,7 @@ sap.ui.define(['sap/ui/core/Control', './library'],
 		/**
 		 * Changes background type
 		 *
+		 * @public
 		 * @param {string} sNewBackground Background's style of type sap.ui.layout.BlockBackgroundType
 		 * @returns {sap.ui.layout.BlockLayout} BlockLayout instance. Allows method chaining
 		 */
