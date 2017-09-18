@@ -28,7 +28,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/core/Control", "sap/ui/core/EnabledP
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.38.27
+		 * @version 1.38.28
 		 *
 		 * @constructor
 		 * @public
