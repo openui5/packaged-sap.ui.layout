@@ -13,7 +13,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 			 *
 			 * @alias sap.ui.fl.changeHandler.MoveElements
 			 * @author SAP SE
-			 * @version 1.50.4
+			 * @version 1.50.5
 			 * @experimental Since 1.34.0
 			 */
 			var MoveSimpleForm = {};
@@ -32,7 +32,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 				for (var i = 0; i < aContent.length; i++) {
 					var sType = oModifier.getControlType(aContent[i]);
 					if (aStopToken.indexOf(sType) === -1) {
-						if (aContent[i].getVisible()) {
+						if (oModifier.getVisible(aContent[i])) {
 							return true;
 						}
 					} else {
@@ -52,7 +52,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 					oModifier.insertAggregation(oSimpleForm, "content", oTitle, 0, oView);
 				}
 
-				return oSimpleForm.getContent();
+				return oModifier.getAggregation(oSimpleForm, "content");
 			};
 
 			var fnMapGroupIndexToContentAggregationIndex = function(oModifier, aStopToken, aContent, iGroupIndex) {
@@ -195,10 +195,10 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 				};
 			};
 
-			var fnRemoveAndInsertAggregation = function(oModifier, oSimpleForm, MoveSimpleForm, aContentClone) {
+			var fnRemoveAndInsertAggregation = function(oModifier, oSimpleForm, MoveSimpleForm, aContentClone, oView) {
 				oModifier.removeAllAggregation(oSimpleForm, MoveSimpleForm.CONTENT_AGGREGATION);
 				for (var i = 0; i < aContentClone.length; ++i) {
-					oModifier.insertAggregation(oSimpleForm, MoveSimpleForm.CONTENT_AGGREGATION, aContentClone[i], i);
+					oModifier.insertAggregation(oSimpleForm, MoveSimpleForm.CONTENT_AGGREGATION, aContentClone[i], i, oView);
 				}
 			};
 
@@ -263,7 +263,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 					}
 
 					if (iSourceFieldIndex != iTargetFieldIndex) {
-						fnRemoveAndInsertAggregation(oModifier, oSimpleForm, MoveSimpleForm, aContentClone);
+						fnRemoveAndInsertAggregation(oModifier, oSimpleForm, MoveSimpleForm, aContentClone, oView);
 					}
 
 				} else if (oChangeWrapper.getChangeType() === MoveSimpleForm.CHANGE_TYPE_MOVE_GROUP) {
@@ -300,7 +300,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 					// and insert it at the target index
 					aContentClone = fnArrayRangeCopy(aContent, iMovedGroupIndex, aContentClone, iTargetIndex + iOffset, iMovedLength);
 
-					fnRemoveAndInsertAggregation(oModifier, oSimpleForm, MoveSimpleForm, aContentClone);
+					fnRemoveAndInsertAggregation(oModifier, oSimpleForm, MoveSimpleForm, aContentClone, oView);
 				} else {
 					jQuery.sap.log.warning("Unknown change type detected. Cannot apply to SimpleForm");
 				}

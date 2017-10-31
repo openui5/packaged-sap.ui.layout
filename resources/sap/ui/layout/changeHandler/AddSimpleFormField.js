@@ -21,7 +21,7 @@ sap.ui.define([
 	 *
 	 * @author SAP SE
 	 *
-	 * @version 1.50.4
+	 * @version 1.50.5
 	 *
 	 * @experimental Since 1.49.0 This class is experimental and provides only limited functionality. Also the API might be
 	 *               changed in future.
@@ -131,7 +131,7 @@ sap.ui.define([
 
 			oModifier.removeAllAggregation(oSimpleForm, "content");
 			for (var i = 0; i < aContentClone.length; ++i) {
-				oModifier.insertAggregation(oSimpleForm, "content", aContentClone[i], i);
+				oModifier.insertAggregation(oSimpleForm, "content", aContentClone[i], i, mPropertyBag.view);
 			}
 
 			return true;
