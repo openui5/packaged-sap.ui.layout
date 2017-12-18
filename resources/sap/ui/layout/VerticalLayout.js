@@ -20,7 +20,7 @@ sap.ui.define(['sap/ui/core/Control', 'sap/ui/core/EnabledPropagator', './librar
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.52.2
+	 * @version 1.52.3
 	 *
 	 * @constructor
 	 * @public

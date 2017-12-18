@@ -44,7 +44,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control',
 	 *
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 * @extends sap.ui.core.Control
-	 * @version 1.52.2
+	 * @version 1.52.3
 	 *
 	 * @constructor
 	 * @public
