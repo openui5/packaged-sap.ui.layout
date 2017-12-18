@@ -20,7 +20,7 @@ sap.ui.define(['sap/ui/core/Control', './library', 'sap/ui/core/theming/Paramete
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.48.15
+		 * @version 1.48.16
 		 *
 		 * @constructor
 		 * @public
