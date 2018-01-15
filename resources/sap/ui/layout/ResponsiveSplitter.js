@@ -1,6 +1,6 @@
 /*!
 * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2018 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
 */
 
@@ -39,10 +39,12 @@ sap.ui.define(["jquery.sap.global", "./library", "sap/ui/core/Control", "./Respo
 	 * <li>On touch-enabled devices, the splitters show explicit handles with larger touch areas.</li>
 	 * <li>Double-clicking on a splitter will collapse or expand it back to its original position.</li>
 	 * </ul>
+	 *
+	 * <b>Note:</b> We don't recommend dynamically inserting/removing panes into/from the PaneContainer since this might lead to inconsistent layout. If it is necessary, you need to ensure the sum of all sizes of the SplitPanes doesn't exceed the width of the PaneContainer.
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.52.3
+	 * @version 1.52.4
 	 *
 	 * @constructor
 	 * @public
