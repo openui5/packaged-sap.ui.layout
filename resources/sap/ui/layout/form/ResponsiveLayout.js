@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2018 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -30,7 +30,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.44.25
+	 * @version 1.44.26
 	 *
 	 * @constructor
 	 * @public
@@ -632,10 +632,21 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/ResponsiveFlowLayout', 'sap/u
 
 				var oContainer = sap.ui.getCore().byId(this.__myParentContainerId);
 				var oLayout = this.__myParentLayout;
-				if (oLayout._mainRFLayout && !oContainer.getToolbar() && !oContainer.getTitle() && !oContainer.getExpandable()) {
+				if (oLayout._mainRFLayout && !oContainer.getToolbar() && !oContainer.getTitle() &&
+						!oContainer.getExpandable() && oContainer.getAriaLabelledBy().length > 0) {
+					// set role only if Title or ariaLabelledBy is set as JAWS 18 has some issues without.
 					return "form";
 				}
 
+			};
+
+			oRFLayout.getAriaLabelledBy = function(){
+				var oContainer = sap.ui.getCore().byId(this.__myParentContainerId);
+				if (oContainer && !oContainer.getToolbar() && !oContainer.getTitle() && !oContainer.getExpandable()) {
+					return oContainer.getAriaLabelledBy();
+				}
+
+				return [];
 			};
 		}
 
