@@ -13,7 +13,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 			 *
 			 * @alias sap.ui.fl.changeHandler.MoveElements
 			 * @author SAP SE
-			 * @version 1.52.6
+			 * @version 1.52.7
 			 * @experimental Since 1.34.0
 			 */
 			var MoveSimpleForm = {};
@@ -76,11 +76,11 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 				return aContent.indexOf(oResult);
 			};
 
-			var fnIsTitleOrToolbar = function(aElements, iIndex) {
+			var fnIsTitleOrToolbar = function(aElements, iIndex, oModifier) {
 				if (iIndex >= aElements.length || iIndex === -1) {
 					return true;
 				}
-				var sType = aElements[iIndex].getMetadata().getName();
+				var sType = oModifier.getControlType(aElements[iIndex]);
 				return (MoveSimpleForm.sTypeTitle === sType
 						|| MoveSimpleForm.sTypeToolBar === sType
 						|| MoveSimpleForm.sTypeMTitle === sType
@@ -110,7 +110,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 			};
 
 			var fnMapFieldIndexToContentAggregationIndex = function(oModifier, aContent, iGroupStart, iFieldIndex, bUp) {
-				if (!fnIsTitleOrToolbar(aContent, iGroupStart)) {
+				if (!fnIsTitleOrToolbar(aContent, iGroupStart, oModifier)) {
 					jQuery.sap.log.error("Illegal argument. iIndex has to point to a Label.");
 				} else {
 					iFieldIndex = bUp ? iFieldIndex + 1 : iFieldIndex;
