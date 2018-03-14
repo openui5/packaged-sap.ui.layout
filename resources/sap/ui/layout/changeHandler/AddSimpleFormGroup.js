@@ -13,7 +13,7 @@ sap.ui.define([
 		 * Change handler for adding a simple form group.
 		 * @alias sap.ui.layout.changeHandler.AddSimpleFormGroup
 		 * @author SAP SE
-		 * @version 1.54.0
+		 * @version 1.54.1
 		 * @experimental Since 1.27.0
 		 */
 		var AddSimpleFormGroup = {};
@@ -24,7 +24,7 @@ sap.ui.define([
 			for (var i = 0; i < aContent.length; i++) {
 				var sType = oModifier.getControlType(aContent[i]);
 				if (aStopToken.indexOf(sType) === -1) {
-					if (aContent[i].getVisible()) {
+					if (oModifier.getVisible(aContent[i])) {
 						return true;
 					}
 				} else {
