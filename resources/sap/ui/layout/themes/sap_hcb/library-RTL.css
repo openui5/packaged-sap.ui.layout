@@ -1009,28 +1009,6 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Phone > .sapUiRespGridBreakS {
   clear: both;
 }
-/* SHOW and HIDE for SMALL contexts */
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridVisibleXL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridVisibleL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridVisibleM {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridVisibleS {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridHiddenXL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridHiddenL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridHiddenM {
-  display: block;
-}
 .sapUiRespGridMedia-Std-Phone > .sapUiRespGridHiddenS {
   display: none;
 }
@@ -1525,30 +1503,8 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Tablet > .sapUiRespGridBreakM {
   clear: both;
 }
-/* SHOW and HIDE for MEDIUM contexts */
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridVisibleXL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridVisibleL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridVisibleM {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridVisibleS {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridHiddenXL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridHiddenL {
-  display: block;
-}
 .sapUiRespGridMedia-Std-Tablet > .sapUiRespGridHiddenM {
   display: none;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridHiddenS {
-  display: block;
 }
 /* ============================= */
 /*   L A R G E   D E V I C E S   */
@@ -2041,30 +1997,8 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Desktop > .sapUiRespGridBreakL {
   clear: both;
 }
-/* SHOW and HIDE for LARGE contexts */
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridVisibleXL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridVisibleL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridVisibleM {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridVisibleS {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridHiddenXL {
-  display: none;
-}
 .sapUiRespGridMedia-Std-Desktop > .sapUiRespGridHiddenL {
   display: none;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridHiddenM {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridHiddenS {
-  display: block;
 }
 /* ====================================== */
 /*  E X T R A   L A R G E   D E V I C E S */
@@ -2557,30 +2491,8 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridBreakXL {
   clear: both;
 }
-/* SHOW and HIDE for XLARGE contexts */
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridVisibleXL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridVisibleL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridVisibleM {
-  display: none;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridVisibleS {
-  display: none;
-}
 .sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridHiddenXL {
   display: none;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridHiddenL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridHiddenM {
-  display: block;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridHiddenS {
-  display: block;
 }
 /* =============== */
 /*   E X T R A S   */
@@ -4112,4 +4024,4 @@ html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:
 }
 
 /* Inline theming parameters */
-#sap-ui-theme-sap\.ui\.layout { background-image: url('data:text/plain;utf-8,%7B%7D'); }
+#sap-ui-theme-sap\.ui\.layout { background-image: url('data:text/plain;utf-8,%7B%22_sap_ui_layout_Form_FormContainerExpImageURL%22:%22url%28%5C%22sap-icon://expand-group%5C%22%29%22,%22_sap_ui_layout_Form_FormContainerColImageURL%22:%22url%28%5C%22sap-icon://collapse-group%5C%22%29%22,%22_sap_ui_layout_FormLayout_FormTitleSize%22:%22H4%22,%22_sap_ui_layout_FormLayout_FormSubTitleSize%22:%22H5%22,%22_sap_ui_layout_Grid_RespGridCols%22:%2212%22,%22_sap_ui_layout_Grid_RespGridCols-1%22:%2211%22,%22_sap_ui_layout_Grid_RespGridOneCol%22:%228.333333333333334%25%22,%22_sap_ui_layout_Grid_RespGridMediaPhone%22:%22sapUiRespGridMedia-Std-Phone%22,%22_sap_ui_layout_Grid_RespGridMediaTablet%22:%22sapUiRespGridMedia-Std-Tablet%22,%22_sap_ui_layout_Grid_RespGridMediaDesktop%22:%22sapUiRespGridMedia-Std-Desktop%22,%22_sap_ui_layout_Grid_RespGridMediaXL%22:%22sapUiRespGridMedia-Std-LargeDesktop%22,%22_sap_ui_layout_Grid_RespGridMediaPhoneSize%22:%22320px%22,%22_sap_ui_layout_Grid_RespGridMediaTabletSize%22:%22600px%22,%22_sap_ui_layout_Grid_RespGridMediaDesktopSize%22:%221024px%22,%22_sap_ui_layout_Grid_RespGridMediaXLSize%22:%221440px%22,%22_sap_ui_layout_Grid_RespGridPxInRem%22:%2216%22,%22_sap_ui_layout_Grid_RespGridVisible%22:%22sapUiRespGridVisible%22,%22_sap_ui_layout_Grid_RespGridHidden%22:%22sapUiRespGridHidden%22,%22_sap_ui_layout_BlockLayoutCell_background%22:%22transparent%22%7D'); }
