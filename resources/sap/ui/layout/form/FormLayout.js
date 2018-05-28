@@ -27,7 +27,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/librar
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.56.0
+	 * @version 1.56.1
 	 *
 	 * @constructor
 	 * @public
@@ -462,7 +462,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/layout/librar
 					oNewDomRef = this.findFirstFieldOfFirstElementInNextContainer(oForm, iCurrentIndex + 1);
 				}
 			}
-		} else if (oElement && oElement.isA("sap/ui/layout/form/FormContainer")) {
+		} else if (oElement && oElement.isA("sap.ui.layout.form.FormContainer")) {
 			// current control is not inside an Element - maybe a title or expander?
 			oNewDomRef = this.findFirstFieldOfNextElement(oElement, 0);
 		}

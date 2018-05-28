@@ -7,8 +7,13 @@
 /*global sap */
 
 sap.ui.define([
-	"sap/ui/fl/changeHandler/Base", "sap/ui/core/util/reflection/JsControlTreeModifier", "sap/ui/fl/Utils"
-], function(BaseChangeHandler, JsControlTreeModifier, Utils) {
+	"sap/ui/fl/changeHandler/Base",
+	"sap/ui/core/util/reflection/JsControlTreeModifier",
+	"sap/ui/fl/Utils"
+], function(
+	BaseChangeHandler,
+	JsControlTreeModifier,
+	Utils) {
 	"use strict";
 
 	/**
@@ -16,7 +21,7 @@ sap.ui.define([
 	 *
 	 * @alias sap.ui.layout.changeHandler.RenameForm
 	 * @author SAP SE
-	 * @version 1.56.0
+	 * @version 1.56.1
 	 * @since 1.40
 	 * @private
 	 * @experimental Since 1.40. This class is experimental and provides only limited functionality. Also the API might be changed in future.
@@ -48,6 +53,7 @@ sap.ui.define([
 				throw new Error("no Control provided for renaming");
 			}
 
+			oChangeWrapper.setRevertData(oModifier.getProperty(oRenamedElement, "text"));
 			var sValue = oChangeDefinition.texts.formText.value;
 			oModifier.setProperty(oRenamedElement, "text", sValue);
 
@@ -55,6 +61,38 @@ sap.ui.define([
 		} else {
 			Utils.log.error("Change does not contain sufficient information to be applied: [" + oChangeDefinition.layer + "]" + oChangeDefinition.namespace + "/" + oChangeDefinition.fileName + "." + oChangeDefinition.fileType);
 			//however subsequent changes should be applied
+		}
+	};
+
+	/**
+	 * Reverts a Rename Change
+	 *
+	 * @param {sap.ui.fl.Change} oChangeWrapper change wrapper object with instructions to be applied on the control map
+	 * @param {sap.ui.core.Control} oControl Control that matches the change selector for applying the change
+	 * @param {object} mPropertyBag property bag
+	 * @param {object} mPropertyBag.modifier modifier for the controls
+	 * @returns {boolean} true if successful
+	 * @public
+	 */
+	RenameForm.revertChange = function(oChangeWrapper, oControl, mPropertyBag) {
+		var sOldText = oChangeWrapper.getRevertData();
+		var oAppComponent = mPropertyBag.appComponent;
+		var oChangeDefinition = oChangeWrapper.getDefinition();
+		var oView = mPropertyBag.view;
+		var oModifier = mPropertyBag.modifier;
+
+		// !important : sRenameId was used in 1.40, do not remove for compatibility!
+		var vSelector = oChangeDefinition.content.elementSelector || oChangeDefinition.content.sRenameId;
+		var oRenamedElement = oModifier.bySelector(vSelector, oAppComponent, oView);
+
+		if (sOldText || sOldText === "") {
+			oModifier.setProperty(oRenamedElement, "text", sOldText);
+			// In some cases the SimpleForm does not properly update the value, so the invalidate call is required
+			oRenamedElement.getParent().invalidate();
+			oChangeWrapper.resetRevertData();
+			return true;
+		} else {
+			Utils.log.error("Change doesn't contain sufficient information to be reverted. Most Likely the Change didn't go through applyChange.");
 		}
 	};
 
