@@ -20,7 +20,7 @@ sap.ui.define(['./Splitter', './SplitterRenderer', 'jquery.sap.global'],
 	 * @extends sap.ui.layout.Splitter
 	 *
 	 * @author SAP SE
-	 * @version 1.52.13
+	 * @version 1.52.14
 	 *
 	 * @constructor
 	 * @private
