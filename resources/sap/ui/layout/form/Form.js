@@ -40,7 +40,7 @@ sap.ui.define(['sap/ui/core/Control', 'sap/ui/layout/library', './FormRenderer']
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.56.2
+	 * @version 1.56.3
 	 *
 	 * @constructor
 	 * @public
