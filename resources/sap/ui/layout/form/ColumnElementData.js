@@ -24,7 +24,7 @@ sap.ui.define(['sap/ui/core/LayoutData', 'sap/ui/layout/library'],
 	 * @extends sap.ui.core.LayoutData
 	 *
 	 * @author SAP SE
-	 * @version 1.56.3
+	 * @version 1.56.4
 	 *
 	 * @constructor
 	 * @public
