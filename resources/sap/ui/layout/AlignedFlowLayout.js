@@ -30,7 +30,7 @@ sap.ui.define([
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.56.4
+		 * @version 1.56.5
 		 *
 		 * @constructor
 		 * @private
@@ -155,15 +155,15 @@ sap.ui.define([
 				bEnoughSpaceForEndItem = true;
 
 			oEndItemDomRef = oEndItemDomRef || this.getDomRef("endItem");
+			var oLastItemDomRef = this.getLastItemDomRef();
 
-			if (oEndItemDomRef) {
+			if (oEndItemDomRef && oLastItemDomRef) {
 				var mLastSpacerStyle = oDomRef.lastElementChild.style;
 				mLastSpacerStyle.height = "";
 				mLastSpacerStyle.display = "";
 				oDomRef.classList.remove(CSS_CLASS_ONE_LINE);
 
-				var oLastItemDomRef = this.getLastItemDomRef(),
-					iEndItemHeight = oEndItemDomRef.offsetHeight,
+				var iEndItemHeight = oEndItemDomRef.offsetHeight,
 					iEndItemWidth = oEndItemDomRef.offsetWidth,
 					iLastItemOffsetLeft = oLastItemDomRef.offsetLeft,
 					iAvailableWidthForEndItem;
@@ -306,8 +306,9 @@ sap.ui.define([
 
 			if (fMinItemWidth) {
 
-				// we do not need more spacers than (documentElement.clientWidth / minItemWidth)
-				iSpacers = Math.abs(document.documentElement.clientWidth / fMinItemWidth);
+				// we do not need more spacers than (iAvailableWidth / minItemWidth)
+				var iAvailableWidth = Math.max(document.documentElement.clientWidth, window.screen.width);
+				iSpacers = Math.abs(iAvailableWidth / fMinItemWidth);
 			}
 
 			// we do not need more spacers than items
