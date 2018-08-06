@@ -32,7 +32,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library', 'sap/ui/
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.52.16
+	 * @version 1.52.17
 	 *
 	 * @constructor
 	 * @public
@@ -772,7 +772,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', './library', 'sap/ui/
 				: this.$("splitbar-" + i).innerHeight();
 		}
 
-		return iFullSize - iSplitBarsWidth;
+		return Math.max(0, iFullSize - iSplitBarsWidth);
 	};
 
 	/**
