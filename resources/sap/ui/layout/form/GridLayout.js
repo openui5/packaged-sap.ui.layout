@@ -29,7 +29,7 @@ sap.ui.define(['jquery.sap.global', './FormLayout', 'sap/ui/layout/library', './
 	 * @extends sap.ui.layout.form.FormLayout
 	 *
 	 * @author SAP SE
-	 * @version 1.56.5
+	 * @version 1.56.6
 	 *
 	 * @constructor
 	 * @public
