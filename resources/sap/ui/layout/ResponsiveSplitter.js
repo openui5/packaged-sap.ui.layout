@@ -21,7 +21,7 @@ sap.ui.define(["jquery.sap.global", "./library", "sap/ui/core/Control", "./Respo
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.44.33
+	 * @version 1.44.34
 	 *
 	 * @constructor
 	 * @public
@@ -120,8 +120,7 @@ sap.ui.define(["jquery.sap.global", "./library", "sap/ui/core/Control", "./Respo
 	ResponsiveSplitter.prototype._setSplitterBarsTooltips = function (oContent, iParent) {
 		var	aSplitterBars = oContent.$().find(" > .sapUiLoSplitterBar"),
 			aContentAreas = oContent.$().find(" > .sapUiLoSplitterContent"),
-			sBaseTooltip = this._oResourceBundle.getText("RESPONSIVE_SPLITTER_RESIZE") + " ",
-			sTooltip = sBaseTooltip,
+			sTooltip = "",
 			iCurrentPaneIndex, iNextPaneIndex, oAreaContent, sContentId;
 
 		for (var i = 0; i < aContentAreas.length; i++) {
@@ -131,14 +130,14 @@ sap.ui.define(["jquery.sap.global", "./library", "sap/ui/core/Control", "./Respo
 			iNextPaneIndex = i + 2;
 
 			if (iParent) {
-				sTooltip += this._oResourceBundle.getText("RESPONSIVE_SPLITTER_PANES", [iParent + "." + iCurrentPaneIndex, iParent + "." + iNextPaneIndex]);
+				sTooltip += this._oResourceBundle.getText("RESPONSIVE_SPLITTER_RESIZE", [iParent + "." + iCurrentPaneIndex, iParent + "." + iNextPaneIndex]);
 			} else {
-				sTooltip += this._oResourceBundle.getText("RESPONSIVE_SPLITTER_PANES", [iCurrentPaneIndex, iNextPaneIndex]);
+				sTooltip += this._oResourceBundle.getText("RESPONSIVE_SPLITTER_RESIZE", [iCurrentPaneIndex, iNextPaneIndex]);
 			}
 
 			if (aSplitterBars[i]) {
 				aSplitterBars[i].setAttribute("title", sTooltip);
-				sTooltip = sBaseTooltip;
+				sTooltip = "";
 			}
 			if (oAreaContent instanceof sap.ui.layout.Splitter) {
 				this._setSplitterBarsTooltips(oAreaContent, iCurrentPaneIndex);
