@@ -11,7 +11,7 @@ sap.ui.define(['sap/ui/fl/changeHandler/JsControlTreeModifier', "sap/base/Log"],
 	 * Change handler for hiding of a control.
 	 * @alias sap.ui.fl.changeHandler.HideControl
 	 * @author SAP SE
-	 * @version 1.58.0
+	 * @version 1.58.1
 	 * @experimental Since 1.27.0
 	 */
 	var HideForm = { };
