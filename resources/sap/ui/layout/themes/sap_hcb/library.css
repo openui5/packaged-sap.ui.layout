@@ -1002,28 +1002,6 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Phone > .sapUiRespGridBreakS {
   clear: both;
 }
-/* SHOW and HIDE for SMALL contexts */
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridVisibleXL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridVisibleL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridVisibleM {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridVisibleS {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridHiddenXL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridHiddenL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Phone > .sapUiRespGridHiddenM {
-  display: block;
-}
 .sapUiRespGridMedia-Std-Phone > .sapUiRespGridHiddenS {
   display: none;
 }
@@ -1518,30 +1496,8 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Tablet > .sapUiRespGridBreakM {
   clear: both;
 }
-/* SHOW and HIDE for MEDIUM contexts */
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridVisibleXL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridVisibleL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridVisibleM {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridVisibleS {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridHiddenXL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridHiddenL {
-  display: block;
-}
 .sapUiRespGridMedia-Std-Tablet > .sapUiRespGridHiddenM {
   display: none;
-}
-.sapUiRespGridMedia-Std-Tablet > .sapUiRespGridHiddenS {
-  display: block;
 }
 /* ============================= */
 /*   L A R G E   D E V I C E S   */
@@ -2034,30 +1990,8 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Desktop > .sapUiRespGridBreakL {
   clear: both;
 }
-/* SHOW and HIDE for LARGE contexts */
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridVisibleXL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridVisibleL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridVisibleM {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridVisibleS {
-  display: none;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridHiddenXL {
-  display: none;
-}
 .sapUiRespGridMedia-Std-Desktop > .sapUiRespGridHiddenL {
   display: none;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridHiddenM {
-  display: block;
-}
-.sapUiRespGridMedia-Std-Desktop > .sapUiRespGridHiddenS {
-  display: block;
 }
 /* ====================================== */
 /*  E X T R A   L A R G E   D E V I C E S */
@@ -2550,30 +2484,8 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridBreakXL {
   clear: both;
 }
-/* SHOW and HIDE for XLARGE contexts */
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridVisibleXL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridVisibleL {
-  display: block;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridVisibleM {
-  display: none;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridVisibleS {
-  display: none;
-}
 .sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridHiddenXL {
   display: none;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridHiddenL {
-  display: none;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridHiddenM {
-  display: block;
-}
-.sapUiRespGridMedia-Std-LargeDesktop > .sapUiRespGridHiddenS {
-  display: block;
 }
 /* =============== */
 /*   E X T R A S   */
