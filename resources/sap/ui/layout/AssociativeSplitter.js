@@ -20,7 +20,7 @@ sap.ui.define(['./Splitter', './SplitterRenderer', "sap/base/Log", "sap/ui/third
 	 * @extends sap.ui.layout.Splitter
 	 *
 	 * @author SAP SE
-	 * @version 1.58.2
+	 * @version 1.58.3
 	 *
 	 * @constructor
 	 * @private
@@ -373,7 +373,7 @@ sap.ui.define(['./Splitter', './SplitterRenderer', "sap/base/Log", "sap/ui/third
 	 */
 	AssociativeSplitter.prototype._recalculateSizes = function () {
 		// TODO: (?) Use maxSize value from layoutData
-		var i, sSize, oLayoutData, iColSize, idx, iSize;
+		var i, sSize, oLayoutData, iColSize, idx, iSize, iMinSize;
 
 		// Read all content sizes from the layout data
 		var aSizes = [];
@@ -434,6 +434,11 @@ sap.ui.define(['./Splitter', './SplitterRenderer', "sap/base/Log", "sap/ui/third
 			} else {
 				// Percent based Value - deduct it from available size
 				iColSize = parseFloat(aSizes[idx]) / 100 * iAvailableSize;
+				iMinSize = parseInt(aContentAreas[idx].getLayoutData().getMinSize(), 10);
+
+				if (iColSize < iMinSize) {
+					iColSize = iMinSize;
+				}
 			}
 			this._calculatedSizes[idx] = iColSize;
 			iRest -= iColSize;
@@ -449,7 +454,7 @@ sap.ui.define(['./Splitter', './SplitterRenderer', "sap/base/Log", "sap/ui/third
 		var iAutoMinSizes = aAutoMinsizeIdx.length;
 		for (i = 0; i < iAutoMinSizes; ++i) {
 			idx = aAutoMinsizeIdx[i];
-			var iMinSize = parseInt(aContentAreas[idx].getLayoutData().getMinSize(), 10);
+			iMinSize = parseInt(aContentAreas[idx].getLayoutData().getMinSize(), 10);
 			if (iMinSize > iColSize) {
 				this._calculatedSizes[idx] = iMinSize;
 				iAvailableSize -= iMinSize;
