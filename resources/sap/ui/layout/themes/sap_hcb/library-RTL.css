@@ -518,37 +518,85 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS1 {
   width: 8.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS1 {
+  width: 8%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS2 {
   width: 16.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS2 {
+  width: 16%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS3 {
+  width: 25%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS3 {
   width: 25%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS4 {
   width: 33.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS4 {
+  width: 33%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS5 {
   width: 41.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS5 {
+  width: 41%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS6 {
+  width: 50%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS6 {
   width: 50%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS7 {
   width: 58.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS7 {
+  width: 58%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS8 {
   width: 66.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS8 {
+  width: 66%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS9 {
+  width: 75%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS9 {
   width: 75%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS10 {
   width: 83.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS10 {
+  width: 83%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS11 {
   width: 91.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS11 {
+  width: 91%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS12 {
+  width: 100%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridSpanS12 {
   width: 100%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS1 {
@@ -556,180 +604,324 @@ div[class*="sapUiRespGrid"]:after {
   width: -webkit-calc(8.333333333333334% - 0.5rem);
   width: calc(8.333333333333334% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS1 {
+  width: 5%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS2 {
   width: 14.16666667%;
   width: -webkit-calc(16.666666666666668% - 0.5rem);
   width: calc(16.666666666666668% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS2 {
+  width: 14%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS3 {
   width: 22.5%;
   width: -webkit-calc(25% - 0.5rem);
   width: calc(25% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS3 {
+  width: 22%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS4 {
   width: 30.83333333%;
   width: -webkit-calc(33.333333333333336% - 0.5rem);
   width: calc(33.333333333333336% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS4 {
+  width: 30%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS5 {
   width: 39.16666667%;
   width: -webkit-calc(41.66666666666667% - 0.5rem);
   width: calc(41.66666666666667% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS5 {
+  width: 39%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS6 {
   width: 47.5%;
   width: -webkit-calc(50% - 0.5rem);
   width: calc(50% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS6 {
+  width: 47%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS7 {
   width: 55.83333333%;
   width: -webkit-calc(58.333333333333336% - 0.5rem);
   width: calc(58.333333333333336% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS7 {
+  width: 55%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS8 {
   width: 64.16666667%;
   width: -webkit-calc(66.66666666666667% - 0.5rem);
   width: calc(66.66666666666667% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS8 {
+  width: 64%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS9 {
   width: 72.5%;
   width: -webkit-calc(75% - 0.5rem);
   width: calc(75% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS9 {
+  width: 72%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS10 {
   width: 80.83333333%;
   width: -webkit-calc(83.33333333333334% - 0.5rem);
   width: calc(83.33333333333334% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS10 {
+  width: 80%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS11 {
   width: 89.16666667%;
   width: -webkit-calc(91.66666666666667% - 0.5rem);
   width: calc(91.66666666666667% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS11 {
+  width: 89%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS12 {
   width: 97.5%;
   width: -webkit-calc(100% - 0.5rem);
   width: calc(100% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace05 > .sapUiRespGridSpanS12 {
+  width: 97%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS1 {
   width: 3.33333333%;
   width: -webkit-calc(8.333333333333334% - 1rem);
   width: calc(8.333333333333334% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS1 {
+  width: 3%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS2 {
   width: 11.66666667%;
   width: -webkit-calc(16.666666666666668% - 1rem);
   width: calc(16.666666666666668% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS2 {
+  width: 11%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS3 {
   width: 20%;
   width: -webkit-calc(25% - 1rem);
   width: calc(25% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS3 {
+  width: 20%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS4 {
   width: 28.33333333%;
   width: -webkit-calc(33.333333333333336% - 1rem);
   width: calc(33.333333333333336% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS4 {
+  width: 28%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS5 {
   width: 36.66666667%;
   width: -webkit-calc(41.66666666666667% - 1rem);
   width: calc(41.66666666666667% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS5 {
+  width: 36%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS6 {
   width: 45%;
   width: -webkit-calc(50% - 1rem);
   width: calc(50% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS6 {
+  width: 45%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS7 {
   width: 53.33333333%;
   width: -webkit-calc(58.333333333333336% - 1rem);
   width: calc(58.333333333333336% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS7 {
+  width: 53%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS8 {
   width: 61.66666667%;
   width: -webkit-calc(66.66666666666667% - 1rem);
   width: calc(66.66666666666667% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS8 {
+  width: 61%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS9 {
   width: 70%;
   width: -webkit-calc(75% - 1rem);
   width: calc(75% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS9 {
+  width: 70%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS10 {
   width: 78.33333333%;
   width: -webkit-calc(83.33333333333334% - 1rem);
   width: calc(83.33333333333334% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS10 {
+  width: 78%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS11 {
   width: 86.66666667%;
   width: -webkit-calc(91.66666666666667% - 1rem);
   width: calc(91.66666666666667% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS11 {
+  width: 86%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS12 {
   width: 95%;
   width: -webkit-calc(100% - 1rem);
   width: calc(100% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1 > .sapUiRespGridSpanS12 {
+  width: 95%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS1 {
   width: -1.66666667%;
   width: -webkit-calc(8.333333333333334% - 2rem);
   width: calc(8.333333333333334% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS1 {
+  width: -2%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS2 {
   width: 6.66666667%;
   width: -webkit-calc(16.666666666666668% - 2rem);
   width: calc(16.666666666666668% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS2 {
+  width: 6%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS3 {
   width: 15%;
   width: -webkit-calc(25% - 2rem);
   width: calc(25% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS3 {
+  width: 15%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS4 {
   width: 23.33333333%;
   width: -webkit-calc(33.333333333333336% - 2rem);
   width: calc(33.333333333333336% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS4 {
+  width: 23%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS5 {
   width: 31.66666667%;
   width: -webkit-calc(41.66666666666667% - 2rem);
   width: calc(41.66666666666667% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS5 {
+  width: 31%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS6 {
   width: 40%;
   width: -webkit-calc(50% - 2rem);
   width: calc(50% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS6 {
+  width: 40%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS7 {
   width: 48.33333333%;
   width: -webkit-calc(58.333333333333336% - 2rem);
   width: calc(58.333333333333336% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS7 {
+  width: 48%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS8 {
   width: 56.66666667%;
   width: -webkit-calc(66.66666666666667% - 2rem);
   width: calc(66.66666666666667% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS8 {
+  width: 56%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS9 {
   width: 65%;
   width: -webkit-calc(75% - 2rem);
   width: calc(75% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS9 {
+  width: 65%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS10 {
   width: 73.33333333%;
   width: -webkit-calc(83.33333333333334% - 2rem);
   width: calc(83.33333333333334% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS10 {
+  width: 73%;
 }
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS11 {
   width: 81.66666667%;
   width: -webkit-calc(91.66666666666667% - 2rem);
   width: calc(91.66666666666667% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS11 {
+  width: 81%;
+}
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS12 {
   width: 90%;
   width: -webkit-calc(100% - 2rem);
   width: calc(100% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace2 > .sapUiRespGridSpanS12 {
+  width: 90%;
 }
 /*INDENTS */
 .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0 > .sapUiRespGridIndentS1 {
@@ -1012,37 +1204,85 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM1 {
   width: 8.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM1 {
+  width: 8%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM2 {
   width: 16.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM2 {
+  width: 16%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM3 {
+  width: 25%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM3 {
   width: 25%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM4 {
   width: 33.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM4 {
+  width: 33%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM5 {
   width: 41.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM5 {
+  width: 41%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM6 {
+  width: 50%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM6 {
   width: 50%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM7 {
   width: 58.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM7 {
+  width: 58%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM8 {
   width: 66.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM8 {
+  width: 66%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM9 {
+  width: 75%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM9 {
   width: 75%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM10 {
   width: 83.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM10 {
+  width: 83%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM11 {
   width: 91.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM11 {
+  width: 91%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM12 {
+  width: 100%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridSpanM12 {
   width: 100%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM1 {
@@ -1050,180 +1290,324 @@ div[class*="sapUiRespGrid"]:after {
   width: -webkit-calc(8.333333333333334% - 0.5rem);
   width: calc(8.333333333333334% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM1 {
+  width: 7%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM2 {
   width: 15.33333333%;
   width: -webkit-calc(16.666666666666668% - 0.5rem);
   width: calc(16.666666666666668% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM2 {
+  width: 15%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM3 {
   width: 23.66666667%;
   width: -webkit-calc(25% - 0.5rem);
   width: calc(25% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM3 {
+  width: 23%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM4 {
   width: 32%;
   width: -webkit-calc(33.333333333333336% - 0.5rem);
   width: calc(33.333333333333336% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM4 {
+  width: 32%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM5 {
   width: 40.33333333%;
   width: -webkit-calc(41.66666666666667% - 0.5rem);
   width: calc(41.66666666666667% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM5 {
+  width: 40%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM6 {
   width: 48.66666667%;
   width: -webkit-calc(50% - 0.5rem);
   width: calc(50% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM6 {
+  width: 48%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM7 {
   width: 57%;
   width: -webkit-calc(58.333333333333336% - 0.5rem);
   width: calc(58.333333333333336% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM7 {
+  width: 57%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM8 {
   width: 65.33333333%;
   width: -webkit-calc(66.66666666666667% - 0.5rem);
   width: calc(66.66666666666667% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM8 {
+  width: 65%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM9 {
   width: 73.66666667%;
   width: -webkit-calc(75% - 0.5rem);
   width: calc(75% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM9 {
+  width: 73%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM10 {
   width: 82%;
   width: -webkit-calc(83.33333333333334% - 0.5rem);
   width: calc(83.33333333333334% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM10 {
+  width: 82%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM11 {
   width: 90.33333333%;
   width: -webkit-calc(91.66666666666667% - 0.5rem);
   width: calc(91.66666666666667% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM11 {
+  width: 90%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM12 {
   width: 98.66666667%;
   width: -webkit-calc(100% - 0.5rem);
   width: calc(100% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace05 > .sapUiRespGridSpanM12 {
+  width: 98%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM1 {
   width: 5.66666667%;
   width: -webkit-calc(8.333333333333334% - 1rem);
   width: calc(8.333333333333334% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM1 {
+  width: 5%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM2 {
   width: 14%;
   width: -webkit-calc(16.666666666666668% - 1rem);
   width: calc(16.666666666666668% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM2 {
+  width: 14%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM3 {
   width: 22.33333333%;
   width: -webkit-calc(25% - 1rem);
   width: calc(25% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM3 {
+  width: 22%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM4 {
   width: 30.66666667%;
   width: -webkit-calc(33.333333333333336% - 1rem);
   width: calc(33.333333333333336% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM4 {
+  width: 30%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM5 {
   width: 39%;
   width: -webkit-calc(41.66666666666667% - 1rem);
   width: calc(41.66666666666667% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM5 {
+  width: 39%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM6 {
   width: 47.33333333%;
   width: -webkit-calc(50% - 1rem);
   width: calc(50% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM6 {
+  width: 47%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM7 {
   width: 55.66666667%;
   width: -webkit-calc(58.333333333333336% - 1rem);
   width: calc(58.333333333333336% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM7 {
+  width: 55%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM8 {
   width: 64%;
   width: -webkit-calc(66.66666666666667% - 1rem);
   width: calc(66.66666666666667% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM8 {
+  width: 64%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM9 {
   width: 72.33333333%;
   width: -webkit-calc(75% - 1rem);
   width: calc(75% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM9 {
+  width: 72%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM10 {
   width: 80.66666667%;
   width: -webkit-calc(83.33333333333334% - 1rem);
   width: calc(83.33333333333334% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM10 {
+  width: 80%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM11 {
   width: 89%;
   width: -webkit-calc(91.66666666666667% - 1rem);
   width: calc(91.66666666666667% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM11 {
+  width: 89%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM12 {
   width: 97.33333333%;
   width: -webkit-calc(100% - 1rem);
   width: calc(100% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace1 > .sapUiRespGridSpanM12 {
+  width: 97%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM1 {
   width: 3%;
   width: -webkit-calc(8.333333333333334% - 2rem);
   width: calc(8.333333333333334% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM1 {
+  width: 3%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM2 {
   width: 11.33333333%;
   width: -webkit-calc(16.666666666666668% - 2rem);
   width: calc(16.666666666666668% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM2 {
+  width: 11%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM3 {
   width: 19.66666667%;
   width: -webkit-calc(25% - 2rem);
   width: calc(25% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM3 {
+  width: 19%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM4 {
   width: 28%;
   width: -webkit-calc(33.333333333333336% - 2rem);
   width: calc(33.333333333333336% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM4 {
+  width: 28%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM5 {
   width: 36.33333333%;
   width: -webkit-calc(41.66666666666667% - 2rem);
   width: calc(41.66666666666667% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM5 {
+  width: 36%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM6 {
   width: 44.66666667%;
   width: -webkit-calc(50% - 2rem);
   width: calc(50% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM6 {
+  width: 44%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM7 {
   width: 53%;
   width: -webkit-calc(58.333333333333336% - 2rem);
   width: calc(58.333333333333336% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM7 {
+  width: 53%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM8 {
   width: 61.33333333%;
   width: -webkit-calc(66.66666666666667% - 2rem);
   width: calc(66.66666666666667% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM8 {
+  width: 61%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM9 {
   width: 69.66666667%;
   width: -webkit-calc(75% - 2rem);
   width: calc(75% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM9 {
+  width: 69%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM10 {
   width: 78%;
   width: -webkit-calc(83.33333333333334% - 2rem);
   width: calc(83.33333333333334% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM10 {
+  width: 78%;
 }
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM11 {
   width: 86.33333333%;
   width: -webkit-calc(91.66666666666667% - 2rem);
   width: calc(91.66666666666667% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM11 {
+  width: 86%;
+}
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM12 {
   width: 94.66666667%;
   width: -webkit-calc(100% - 2rem);
   width: calc(100% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace2 > .sapUiRespGridSpanM12 {
+  width: 94%;
 }
 /*INDENTS */
 .sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0 > .sapUiRespGridIndentM1 {
@@ -1506,37 +1890,85 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL1 {
   width: 8.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL1 {
+  width: 8%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL2 {
   width: 16.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL2 {
+  width: 16%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL3 {
+  width: 25%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL3 {
   width: 25%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL4 {
   width: 33.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL4 {
+  width: 33%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL5 {
   width: 41.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL5 {
+  width: 41%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL6 {
+  width: 50%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL6 {
   width: 50%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL7 {
   width: 58.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL7 {
+  width: 58%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL8 {
   width: 66.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL8 {
+  width: 66%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL9 {
+  width: 75%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL9 {
   width: 75%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL10 {
   width: 83.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL10 {
+  width: 83%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL11 {
   width: 91.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL11 {
+  width: 91%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL12 {
+  width: 100%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL12 {
   width: 100%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL1 {
@@ -1544,180 +1976,324 @@ div[class*="sapUiRespGrid"]:after {
   width: -webkit-calc(8.333333333333334% - 0.5rem);
   width: calc(8.333333333333334% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL1 {
+  width: 7%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL2 {
   width: 15.88541667%;
   width: -webkit-calc(16.666666666666668% - 0.5rem);
   width: calc(16.666666666666668% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL2 {
+  width: 15%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL3 {
   width: 24.21875%;
   width: -webkit-calc(25% - 0.5rem);
   width: calc(25% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL3 {
+  width: 24%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL4 {
   width: 32.55208333%;
   width: -webkit-calc(33.333333333333336% - 0.5rem);
   width: calc(33.333333333333336% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL4 {
+  width: 32%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL5 {
   width: 40.88541667%;
   width: -webkit-calc(41.66666666666667% - 0.5rem);
   width: calc(41.66666666666667% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL5 {
+  width: 40%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL6 {
   width: 49.21875%;
   width: -webkit-calc(50% - 0.5rem);
   width: calc(50% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL6 {
+  width: 49%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL7 {
   width: 57.55208333%;
   width: -webkit-calc(58.333333333333336% - 0.5rem);
   width: calc(58.333333333333336% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL7 {
+  width: 57%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL8 {
   width: 65.88541667%;
   width: -webkit-calc(66.66666666666667% - 0.5rem);
   width: calc(66.66666666666667% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL8 {
+  width: 65%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL9 {
   width: 74.21875%;
   width: -webkit-calc(75% - 0.5rem);
   width: calc(75% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL9 {
+  width: 74%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL10 {
   width: 82.55208333%;
   width: -webkit-calc(83.33333333333334% - 0.5rem);
   width: calc(83.33333333333334% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL10 {
+  width: 82%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL11 {
   width: 90.88541667%;
   width: -webkit-calc(91.66666666666667% - 0.5rem);
   width: calc(91.66666666666667% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL11 {
+  width: 90%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL12 {
   width: 99.21875%;
   width: -webkit-calc(100% - 0.5rem);
   width: calc(100% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanL12 {
+  width: 99%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL1 {
   width: 6.77083333%;
   width: -webkit-calc(8.333333333333334% - 1rem);
   width: calc(8.333333333333334% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL1 {
+  width: 6%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL2 {
   width: 15.10416667%;
   width: -webkit-calc(16.666666666666668% - 1rem);
   width: calc(16.666666666666668% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL2 {
+  width: 15%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL3 {
   width: 23.4375%;
   width: -webkit-calc(25% - 1rem);
   width: calc(25% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL3 {
+  width: 23%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL4 {
   width: 31.77083333%;
   width: -webkit-calc(33.333333333333336% - 1rem);
   width: calc(33.333333333333336% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL4 {
+  width: 31%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL5 {
   width: 40.10416667%;
   width: -webkit-calc(41.66666666666667% - 1rem);
   width: calc(41.66666666666667% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL5 {
+  width: 40%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL6 {
   width: 48.4375%;
   width: -webkit-calc(50% - 1rem);
   width: calc(50% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL6 {
+  width: 48%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL7 {
   width: 56.77083333%;
   width: -webkit-calc(58.333333333333336% - 1rem);
   width: calc(58.333333333333336% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL7 {
+  width: 56%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL8 {
   width: 65.10416667%;
   width: -webkit-calc(66.66666666666667% - 1rem);
   width: calc(66.66666666666667% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL8 {
+  width: 65%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL9 {
   width: 73.4375%;
   width: -webkit-calc(75% - 1rem);
   width: calc(75% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL9 {
+  width: 73%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL10 {
   width: 81.77083333%;
   width: -webkit-calc(83.33333333333334% - 1rem);
   width: calc(83.33333333333334% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL10 {
+  width: 81%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL11 {
   width: 90.10416667%;
   width: -webkit-calc(91.66666666666667% - 1rem);
   width: calc(91.66666666666667% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL11 {
+  width: 90%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL12 {
   width: 98.4375%;
   width: -webkit-calc(100% - 1rem);
   width: calc(100% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanL12 {
+  width: 98%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL1 {
   width: 5.20833333%;
   width: -webkit-calc(8.333333333333334% - 2rem);
   width: calc(8.333333333333334% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL1 {
+  width: 5%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL2 {
   width: 13.54166667%;
   width: -webkit-calc(16.666666666666668% - 2rem);
   width: calc(16.666666666666668% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL2 {
+  width: 13%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL3 {
   width: 21.875%;
   width: -webkit-calc(25% - 2rem);
   width: calc(25% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL3 {
+  width: 21%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL4 {
   width: 30.20833333%;
   width: -webkit-calc(33.333333333333336% - 2rem);
   width: calc(33.333333333333336% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL4 {
+  width: 30%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL5 {
   width: 38.54166667%;
   width: -webkit-calc(41.66666666666667% - 2rem);
   width: calc(41.66666666666667% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL5 {
+  width: 38%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL6 {
   width: 46.875%;
   width: -webkit-calc(50% - 2rem);
   width: calc(50% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL6 {
+  width: 46%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL7 {
   width: 55.20833333%;
   width: -webkit-calc(58.333333333333336% - 2rem);
   width: calc(58.333333333333336% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL7 {
+  width: 55%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL8 {
   width: 63.54166667%;
   width: -webkit-calc(66.66666666666667% - 2rem);
   width: calc(66.66666666666667% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL8 {
+  width: 63%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL9 {
   width: 71.875%;
   width: -webkit-calc(75% - 2rem);
   width: calc(75% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL9 {
+  width: 71%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL10 {
   width: 80.20833333%;
   width: -webkit-calc(83.33333333333334% - 2rem);
   width: calc(83.33333333333334% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL10 {
+  width: 80%;
 }
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL11 {
   width: 88.54166667%;
   width: -webkit-calc(91.66666666666667% - 2rem);
   width: calc(91.66666666666667% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL11 {
+  width: 88%;
+}
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL12 {
   width: 96.875%;
   width: -webkit-calc(100% - 2rem);
   width: calc(100% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanL12 {
+  width: 96%;
 }
 /*INDENTS */
 .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridIndentL1 {
@@ -2000,37 +2576,85 @@ div[class*="sapUiRespGrid"]:after {
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL1 {
   width: 8.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL1 {
+  width: 8%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL2 {
   width: 16.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL2 {
+  width: 16%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL3 {
+  width: 25%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL3 {
   width: 25%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL4 {
   width: 33.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL4 {
+  width: 33%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL5 {
   width: 41.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL5 {
+  width: 41%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL6 {
+  width: 50%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL6 {
   width: 50%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL7 {
   width: 58.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL7 {
+  width: 58%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL8 {
   width: 66.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL8 {
+  width: 66%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL9 {
+  width: 75%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL9 {
   width: 75%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL10 {
   width: 83.33333333%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL10 {
+  width: 83%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL11 {
   width: 91.66666667%;
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL11 {
+  width: 91%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL12 {
+  width: 100%;
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanXL12 {
   width: 100%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL1 {
@@ -2038,180 +2662,324 @@ div[class*="sapUiRespGrid"]:after {
   width: -webkit-calc(8.333333333333334% - 0.5rem);
   width: calc(8.333333333333334% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL1 {
+  width: 7%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL2 {
   width: 16.11111111%;
   width: -webkit-calc(16.666666666666668% - 0.5rem);
   width: calc(16.666666666666668% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL2 {
+  width: 16%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL3 {
   width: 24.44444444%;
   width: -webkit-calc(25% - 0.5rem);
   width: calc(25% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL3 {
+  width: 24%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL4 {
   width: 32.77777778%;
   width: -webkit-calc(33.333333333333336% - 0.5rem);
   width: calc(33.333333333333336% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL4 {
+  width: 32%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL5 {
   width: 41.11111111%;
   width: -webkit-calc(41.66666666666667% - 0.5rem);
   width: calc(41.66666666666667% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL5 {
+  width: 41%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL6 {
   width: 49.44444444%;
   width: -webkit-calc(50% - 0.5rem);
   width: calc(50% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL6 {
+  width: 49%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL7 {
   width: 57.77777778%;
   width: -webkit-calc(58.333333333333336% - 0.5rem);
   width: calc(58.333333333333336% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL7 {
+  width: 57%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL8 {
   width: 66.11111111%;
   width: -webkit-calc(66.66666666666667% - 0.5rem);
   width: calc(66.66666666666667% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL8 {
+  width: 66%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL9 {
   width: 74.44444444%;
   width: -webkit-calc(75% - 0.5rem);
   width: calc(75% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL9 {
+  width: 74%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL10 {
   width: 82.77777778%;
   width: -webkit-calc(83.33333333333334% - 0.5rem);
   width: calc(83.33333333333334% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL10 {
+  width: 82%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL11 {
   width: 91.11111111%;
   width: -webkit-calc(91.66666666666667% - 0.5rem);
   width: calc(91.66666666666667% - 0.5rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL11 {
+  width: 91%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL12 {
   width: 99.44444444%;
   width: -webkit-calc(100% - 0.5rem);
   width: calc(100% - 0.5rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace05 > .sapUiRespGridSpanXL12 {
+  width: 99%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL1 {
   width: 7.22222222%;
   width: -webkit-calc(8.333333333333334% - 1rem);
   width: calc(8.333333333333334% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL1 {
+  width: 7%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL2 {
   width: 15.55555556%;
   width: -webkit-calc(16.666666666666668% - 1rem);
   width: calc(16.666666666666668% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL2 {
+  width: 15%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL3 {
   width: 23.88888889%;
   width: -webkit-calc(25% - 1rem);
   width: calc(25% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL3 {
+  width: 23%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL4 {
   width: 32.22222222%;
   width: -webkit-calc(33.333333333333336% - 1rem);
   width: calc(33.333333333333336% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL4 {
+  width: 32%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL5 {
   width: 40.55555556%;
   width: -webkit-calc(41.66666666666667% - 1rem);
   width: calc(41.66666666666667% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL5 {
+  width: 40%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL6 {
   width: 48.88888889%;
   width: -webkit-calc(50% - 1rem);
   width: calc(50% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL6 {
+  width: 48%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL7 {
   width: 57.22222222%;
   width: -webkit-calc(58.333333333333336% - 1rem);
   width: calc(58.333333333333336% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL7 {
+  width: 57%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL8 {
   width: 65.55555556%;
   width: -webkit-calc(66.66666666666667% - 1rem);
   width: calc(66.66666666666667% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL8 {
+  width: 65%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL9 {
   width: 73.88888889%;
   width: -webkit-calc(75% - 1rem);
   width: calc(75% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL9 {
+  width: 73%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL10 {
   width: 82.22222222%;
   width: -webkit-calc(83.33333333333334% - 1rem);
   width: calc(83.33333333333334% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL10 {
+  width: 82%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL11 {
   width: 90.55555556%;
   width: -webkit-calc(91.66666666666667% - 1rem);
   width: calc(91.66666666666667% - 1rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL11 {
+  width: 90%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL12 {
   width: 98.88888889%;
   width: -webkit-calc(100% - 1rem);
   width: calc(100% - 1rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace1 > .sapUiRespGridSpanXL12 {
+  width: 98%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL1 {
   width: 6.11111111%;
   width: -webkit-calc(8.333333333333334% - 2rem);
   width: calc(8.333333333333334% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL1,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL1 {
+  width: 6%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL2 {
   width: 14.44444444%;
   width: -webkit-calc(16.666666666666668% - 2rem);
   width: calc(16.666666666666668% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL2,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL2 {
+  width: 14%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL3 {
   width: 22.77777778%;
   width: -webkit-calc(25% - 2rem);
   width: calc(25% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL3,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL3 {
+  width: 22%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL4 {
   width: 31.11111111%;
   width: -webkit-calc(33.333333333333336% - 2rem);
   width: calc(33.333333333333336% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL4,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL4 {
+  width: 31%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL5 {
   width: 39.44444444%;
   width: -webkit-calc(41.66666666666667% - 2rem);
   width: calc(41.66666666666667% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL5,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL5 {
+  width: 39%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL6 {
   width: 47.77777778%;
   width: -webkit-calc(50% - 2rem);
   width: calc(50% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL6,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL6 {
+  width: 47%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL7 {
   width: 56.11111111%;
   width: -webkit-calc(58.333333333333336% - 2rem);
   width: calc(58.333333333333336% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL7,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL7 {
+  width: 56%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL8 {
   width: 64.44444444%;
   width: -webkit-calc(66.66666666666667% - 2rem);
   width: calc(66.66666666666667% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL8,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL8 {
+  width: 64%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL9 {
   width: 72.77777778%;
   width: -webkit-calc(75% - 2rem);
   width: calc(75% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL9,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL9 {
+  width: 72%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL10 {
   width: 81.11111111%;
   width: -webkit-calc(83.33333333333334% - 2rem);
   width: calc(83.33333333333334% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL10,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL10 {
+  width: 81%;
 }
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL11 {
   width: 89.44444444%;
   width: -webkit-calc(91.66666666666667% - 2rem);
   width: calc(91.66666666666667% - 2rem);
 }
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL11,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL11 {
+  width: 89%;
+}
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL12 {
   width: 97.77777778%;
   width: -webkit-calc(100% - 2rem);
   width: calc(100% - 2rem);
+}
+html[data-sap-ui-browser*='ie'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL12,
+html[data-sap-ui-browser*='ed'] .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace2 > .sapUiRespGridSpanXL12 {
+  width: 97%;
 }
 /*INDENTS */
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiRespGridHSpace0 > .sapUiRespGridIndentXL1 {
