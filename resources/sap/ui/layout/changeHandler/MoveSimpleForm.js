@@ -13,7 +13,7 @@ sap.ui.define(["jquery.sap.global", "sap/ui/fl/changeHandler/JsControlTreeModifi
 			 *
 			 * @alias sap.ui.fl.changeHandler.MoveElements
 			 * @author SAP SE
-			 * @version 1.44.36
+			 * @version 1.44.37
 			 * @experimental Since 1.34.0
 			 */
 			var MoveSimpleForm = {};
