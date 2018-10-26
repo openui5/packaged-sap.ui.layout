@@ -66,7 +66,7 @@ sap.ui.define([
 	 * <b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.
 	 *
 	 * @extends sap.ui.core.Control
-	 * @version 1.58.4
+	 * @version 1.58.5
 	 *
 	 * @constructor
 	 * @public
