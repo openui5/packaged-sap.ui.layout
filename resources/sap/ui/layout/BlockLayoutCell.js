@@ -20,7 +20,7 @@ sap.ui.define(['sap/ui/core/Control', './library', "./BlockLayoutCellRenderer"],
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.56.15
+		 * @version 1.56.16
 		 *
 		 * @constructor
 		 * @public
