@@ -40,7 +40,7 @@ sap.ui.define(['sap/ui/core/Control', 'sap/ui/layout/library'],
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.52.22
+	 * @version 1.52.23
 	 *
 	 * @constructor
 	 * @public
