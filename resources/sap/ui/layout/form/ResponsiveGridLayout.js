@@ -1,6 +1,6 @@
 /*!
  * UI development toolkit for HTML5 (OpenUI5)
- * (c) Copyright 2009-2018 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2019 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 
@@ -33,7 +33,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/Grid', 'sap/ui/layout/GridDat
 	 *
 	 * This control cannot be used stand-alone, it just renders a <code>Form</code>, so it must be assigned to a <code>Form</code> using the <code>layout</code> aggregation.
 	 * @extends sap.ui.layout.form.FormLayout
-	 * @version 1.56.16
+	 * @version 1.56.18
 	 *
 	 * @constructor
 	 * @public
