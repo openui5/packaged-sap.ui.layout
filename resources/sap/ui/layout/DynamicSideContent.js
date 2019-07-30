@@ -83,7 +83,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 		 * @extends sap.ui.core.Control
 		 *
 		 * @author SAP SE
-		 * @version 1.52.30
+		 * @version 1.52.31
 		 *
 		 * @constructor
 		 * @public
@@ -677,9 +677,14 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 			} else if (!this._SCVisible && !this._MCVisible) {
 				$mainContent.addClass(HIDDEN_CLASS);
 				$sideContent.addClass(HIDDEN_CLASS);
-			} else if (!this._SCVisible && this._MCVisible && bSideContentVisibleProperty && bMainContentVisibleProperty) {
+			//BCP: 1980254677
+			} else if (sap.ui.Device.system.phone && !this._SCVisible && this._MCVisible && bSideContentVisibleProperty && bMainContentVisibleProperty) {
 				$sideContent.removeClass().addClass(SPAN_SIZE_12_CLASS);
 				$mainContent.addClass(HIDDEN_CLASS);
+			//BCP: 1970185680
+			} else if (sap.ui.Device.system.phone && !this._MCVisible && this._SCVisible && bSideContentVisibleProperty && bMainContentVisibleProperty) {
+				$mainContent.removeClass().addClass(SPAN_SIZE_12_CLASS);
+				$sideContent.addClass(HIDDEN_CLASS);
 			} else if (this._MCVisible && bMainContentVisibleProperty) {
 				$mainContent.removeClass().addClass(SPAN_SIZE_12_CLASS);
 				$sideContent.addClass(HIDDEN_CLASS);
